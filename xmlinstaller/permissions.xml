@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<eZXMLImporter xmlns="http://ez.no/URI/xmlinstaller/0.1.5">
+	<CreateRole>
+		<Role name="Anonymous" replacePolicies="true">
+			<Policy function="login" module="user">
+				<Limitations>
+					<SiteAccess>fr</SiteAccess>
+					<SiteAccess>en</SiteAccess>
+				</Limitations>
+			</Policy>
+			<Policy function="read" module="content">
+				<Limitations>
+					<Section>standard</Section>
+					<Section>media</Section>
+				</Limitations>
+			</Policy>
+		</Role>
+		<Role name="Webmaster" replacePolicies="true">
+			<Policy function="login" module="user"></Policy>
+			<Policy function="read" module="content"></Policy>
+			<Policy function="restore" module="content"></Policy>
+			<Policy function="move" module="content"></Policy>
+			<Policy function="manage_locations" module="content"></Policy>
+			<Policy function="dashboard" module="content"></Policy>
+			<Policy function="*" module="ezoe"></Policy>
+			<Policy function="*" module="ezmultiupload"></Policy>
+			<Policy function="*" module="ezie"></Policy>
+			<Policy function="managecache" module="setup"></Policy>
+		</Role>
+        <Role name="Modérateurs" createRole="true" replacePolicies="true"
+            referenceID="ROLE_MODERATEURS">
+            <Policy function="*" module="collaboration"></Policy>
+            <Policy function="use" module="notification"></Policy>
+            <Policy function="login" module="user"></Policy>
+        </Role>
+	</CreateRole>
+</eZXMLImporter>

@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Se lit de haut en bas -->
+<upgrades>
+    <upgrade version="0.0.0">
+        <xmlinstaller mode="file">extension/__projet__/xmlinstaller/tags.xml</xmlinstaller>
+        <xmlinstaller mode="file">extension/__projet__/xmlinstaller/classes.xml</xmlinstaller>
+        <xmlinstaller mode="file">extension/__projet__/xmlinstaller/arbo.xml</xmlinstaller>
+        <xmlinstaller mode="file">extension/__projet__/xmlinstaller/permissions.xml</xmlinstaller>
+        <xmlinstaller mode="file">extension/__projet__/xmlinstaller/contenus_test.xml</xmlinstaller>
+    </upgrade>
+    <upgrade version="1.2737.0">
+        <php script="extension/ezfind/bin/php/updatesearchindexsolr.php">
+            <option name="clean-all" />
+            <option name="siteaccess">fr_admin</option>
+        </php>
+    </upgrade>
+</upgrades>

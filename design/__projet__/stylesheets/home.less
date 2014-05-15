@@ -1,0 +1,97 @@
+#tabs{
+	margin-bottom:2em;
+ 	.ui-tabs-nav{
+ 		.clearfix;
+ 		
+ 		li{
+ 			display:inline;
+			border:1px solid @borders;
+			border-bottom:none;
+		    float: left;
+		    position: relative;
+		    white-space: nowrap;
+			padding: 0.3em 1em;
+			.border-radius(5px 5px 0 0);
+			 
+			a{
+				padding:1em;
+			}
+ 		}
+ 		li + li{
+ 			margin-left:1em;
+ 		}
+ 		li.ui-tabs-active{
+			background-color: @bleu;
+			a{
+				color:#fff;
+				text-decoration:none;
+			}
+ 		}
+ 	}
+  	.ui-tabs-panel{
+		background-color: @bleu;
+		.border-radius(5px);
+		height: 130px;
+  	}
+ }
+ 
+ .searchbox{
+ 	.clearfix;
+ 	& .input-field{
+ 		float:left;
+ 		margin:2em 2em 0 0;
+ 		color:#fff;
+ 		
+ 		& label{
+ 			display:block;
+ 			margin-left: 1em;
+ 		}
+ 		& input{
+ 			display:block;
+ 			height: 2.5em;
+    		width: 20em;
+			.border-radius(5px);
+			padding: 0 0.1em;
+ 		}
+ 	}
+ 	& > div:first-child{
+ 		margin-left:2em;
+ 	}
+ 	.go{
+ 		float:right;
+ 		margin:2em 2em 0 0;
+ 		padding-top: 1.5em;
+ 		
+ 		input{
+ 			height: 2.5em;
+    		width: 11em;
+    		color:#fff;
+			background-color: @btn-search;
+			border:2px solid #fff;
+			.border-radius(5px);
+			
+ 		}
+ 	}
+ }
+ .full{
+ 	& .carousel,
+ 	& .carousel .item,
+ 	& .carousel-inner > .item > img  {
+	    height: 210px;
+	}
+	& .carousel {
+	    margin-bottom: 2em;
+	}
+ 	.row{
+ 		margin:0;
+ 	}
+ 	.block{
+		
+ 	}
+ 	.block.col-sm-6{
+ 		padding:0;
+ 	}
+ 	.block.col-sm-6.left{
+ 		padding-right: 2%;
+ 	}
+ }

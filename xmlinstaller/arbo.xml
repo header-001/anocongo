@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<eZXMLImporter xmlns="http://ez.no/URI/xmlinstaller/0.1.5">
+	<ProccessInformation comment="Création de l'arborescence" />
+	<CreateContent parentNode="2" priorityMode="auto">
+		<ContentObject contentClass="article" remoteID="PRESENTATION"
+			sort_order="asc" sort_field="priority">
+			<Attributes>
+				<title>Présentation</title>
+                <in_menu>1</in_menu>
+			</Attributes>
+		</ContentObject>
+		<ContentObject contentClass="folder" remoteID="DOCUMENTION"
+			sort_order="asc" sort_field="priority">
+			<Attributes>
+				<title>Documentation</title>
+                <in_menu>1</in_menu>
+                <show_children>1</show_children>
+			</Attributes>
+			<!-- Childs>
+				<ContentObject contentClass="folder" remoteID="TEST1"
+					sort_order="asc" sort_field="priority">
+					<Attributes>
+						<title>TEST1</title>
+                        <long_title>TEST1 titre long</long_title>
+					</Attributes>
+				</ContentObject>
+			</Childs -->
+		</ContentObject>
+		<ContentObject contentClass="article" remoteID="NOS_SERVICES"
+			sort_order="asc" sort_field="priority">
+			<Attributes>
+				<title>Nos services</title>
+                <in_menu>1</in_menu>
+			</Attributes>
+		</ContentObject>
+		<ContentObject contentClass="article" remoteID="AGENDA"
+			sort_order="asc" sort_field="priority">
+			<Attributes>
+				<title>Agenda</title>
+                <in_menu>1</in_menu>
+			</Attributes>
+		</ContentObject>
+        <ContentObject contentClass="contact" remoteID="CONTACT"
+            sort_order="asc" sort_field="priority">
+            <Attributes>
+                <title>Contact</title>
+                <in_menu>1</in_menu>
+            </Attributes>
+        </ContentObject>
+        <ContentObject contentClass="folder" remoteID="COLONNE_DROITE"
+            sort_order="asc" sort_field="priority">
+            <Attributes>
+                <title>Colonne de droite</title>
+                <in_menu>0</in_menu>
+            </Attributes>
+        </ContentObject>
+		<ContentObject contentClass="folder" remoteID="FOOTER"
+			sort_order="asc" sort_field="priority">
+			<Attributes>
+				<title>Footer</title>
+                <in_menu>0</in_menu>
+			</Attributes>
+			<Childs>
+				<ContentObject contentClass="article" remoteID="MENTIONS"
+					sort_order="asc" sort_field="priority">
+					<Attributes>
+						<title>Mentions légales</title>
+						<in_menu>1</in_menu>
+					</Attributes>
+				</ContentObject>
+				<ContentObject contentClass="article" remoteID="CREDITS"
+					sort_order="asc" sort_field="priority">
+					<Attributes>
+						<title>Crédits</title>
+						<in_menu>1</in_menu>
+					</Attributes>
+				</ContentObject>
+				<ContentObject contentClass="link" remoteID="PLAN_SITE">
+				    <Attributes>
+				        <title>Plan du site</title>
+				        <location url="/content/view/sitemap/2" title="" />
+                        <in_menu>1</in_menu>
+				    </Attributes>
+				</ContentObject>
+                <ContentObject contentClass="link" remoteID="CONTACT_LINK">
+                    <Attributes>
+                        <title>Contact</title>
+                        <cible>remote_id:CONTACT</cible>
+                        <in_menu>1</in_menu>
+                    </Attributes>
+                </ContentObject>
+			</Childs>
+		</ContentObject>
+	</CreateContent>
+</eZXMLImporter>

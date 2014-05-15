@@ -1,0 +1,398 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<eZXMLImporter xmlns="http://ez.no/URI/xmlinstaller/0.1.5" data_source="extension/__projet__/xmlinstaller/data">
+    <ProccessInformation comment="Création des média" /> 
+    
+    <CreateContent parentNode="52">
+        <ContentObject contentClass="file" remoteID="FAKE_pdf_poissons">
+            <Attributes>
+             <name>Lorem Ipsum</name>
+             <file>extension/__base__/xmlinstaller/contents/poissons.pdf</file>
+            </Attributes>
+        </ContentObject>
+    </CreateContent>
+    
+    <CreateContent parentNode="51">
+	    <ContentObject contentClass="image" remoteID="BANNIERE">
+			<Attributes>
+			   <name>Bannière</name>
+			   <image src="banniere.jpg" title="Bannière" />
+		    </Attributes>
+	    </ContentObject>
+	    <ContentObject contentClass="image" remoteID="LOGO_CDI_SHERPA">
+	        <Attributes>
+	           <name>logo cdi Sherpa</name>
+	           <image src="logo-cdisherpa.jpg" title="Logo cdi sherpa" />
+	        </Attributes>
+	    </ContentObject>
+	    <ContentObject contentClass="image" remoteID="LOGO_DECLARER_CHANTIER">
+	        <Attributes>
+	           <name>logo déclarer mon chantier</name>
+	           <image src="logo-declarermonchantier.jpg" title="Logo cdi sherpa" />
+	        </Attributes>
+	    </ContentObject>
+	    <ContentObject contentClass="image" remoteID="LOGO_DICT_FR">
+	        <Attributes>
+	           <name>logo DICT</name>
+	           <image src="logo-dict.fr.jpg" title="Logo DICT" />
+	        </Attributes>
+	    </ContentObject>
+	    <ContentObject contentClass="image" remoteID="LOGO_LVDR">
+	        <Attributes>
+	           <name>logo LVDR</name>
+	           <image src="logo-lvdr.jpg" title="Logo LVDR" />
+	        </Attributes>
+	    </ContentObject>
+	    <ContentObject contentClass="image" remoteID="SOGELINK_QUI_SOMMES_NOUS">
+	        <Attributes>
+	           <name>Qui sommes nous</name>
+	           <image src="sogelink-qui-sommes-nous.jpg" title="Logo Qui somme nous" />
+	        </Attributes>
+	    </ContentObject>
+	    <ContentObject contentClass="image" remoteID="PART1">
+	        <Attributes>
+	           <name>Part1</name>
+	           <image src="Part1.png" title="Part1" />
+	        </Attributes>
+	    </ContentObject>
+	    <ContentObject contentClass="image" remoteID="PART2">
+	        <Attributes>
+	           <name>Part2</name>
+	           <image src="Part2.png" title="Part2" />
+	        </Attributes>
+	    </ContentObject>
+	    <ContentObject contentClass="image" remoteID="PART3">
+	        <Attributes>
+	           <name>Part3</name>
+	           <image src="Part3.png" title="Part3" />
+	        </Attributes>
+	    </ContentObject>
+	    <ContentObject contentClass="image" remoteID="PART4">
+	        <Attributes>
+	           <name>Part4</name>
+	           <image src="Part4.png" title="Part4" />
+	        </Attributes>
+	    </ContentObject>
+	    <ContentObject contentClass="image" remoteID="PART5">
+	        <Attributes>
+	           <name>Part5</name>
+	           <image src="Part5.png" title="Part5" />
+	        </Attributes>
+	    </ContentObject>
+	    <ContentObject contentClass="image" remoteID="PART6">
+	        <Attributes>
+	           <name>Part6</name>
+	           <image src="Part6.png" title="Part6" />
+	        </Attributes>
+	    </ContentObject>
+	    <ContentObject contentClass="image" remoteID="PART7">
+	        <Attributes>
+	           <name>Part7</name>
+	           <image src="Part7.png" title="Part7" />
+	        </Attributes>
+	    </ContentObject>
+	    <ContentObject contentClass="image" remoteID="PART8">
+	        <Attributes>
+	           <name>Part8</name>
+	           <image src="Part8.png" title="Part8" />
+	        </Attributes>
+	    </ContentObject>
+	    <ContentObject contentClass="image" remoteID="PART9">
+	        <Attributes>
+	           <name>Part9</name>
+	           <image src="Part9.png" title="Part9" />
+	        </Attributes>
+	    </ContentObject>
+	    <ContentObject contentClass="image" remoteID="PART10">
+	        <Attributes>
+	           <name>Part10</name>
+	           <image src="Part10.png" title="Part10" />
+	        </Attributes>
+	    </ContentObject>
+	    <ContentObject contentClass="image" remoteID="BANNIERE_VIDE">
+	        <Attributes>
+	           <name>BANNIERE_VIDE</name>
+	           <image src="BANNIERE_VIDE.png" title="BANNIERE_VIDE" />
+	        </Attributes>
+	    </ContentObject>
+	    <ContentObject contentClass="image" remoteID="BANNIERE_GREEN">
+	        <Attributes>
+	           <name>BANNIERE_GREEN</name>
+	           <image src="BANNIERE_GREEN.png" title="BANNIERE_GREEN" />
+	        </Attributes>
+	    </ContentObject>
+    </CreateContent>
+    
+    <CreateContent parentNode="53">
+     <ContentObject contentClass="video" remoteID="QUI_SOMMES_NOUS_VIDEO">
+		<Attributes>
+		 <name>Sogelink avec vous, |au coeur de la nouvelle réglemnetation|</name>
+		 <video>http://vimeo.com/44917791</video>
+		</Attributes>
+     </ContentObject>
+    </CreateContent>
+    
+  
+    
+    <CreateContent parentNode="remote_id_node_id:DOCUMENTION" priorityMode="auto">
+		<ContentObject contentClass="folder" remoteID="TEST1"
+			sort_order="asc" sort_field="priority">
+			<Attributes>
+				<title>TEST1</title>
+                      <long_title>TEST1 titre long</long_title>
+			</Attributes>
+		</ContentObject>
+		<ContentObject contentClass="folder" remoteID="TEST2"
+			sort_order="asc" sort_field="priority">
+			<Attributes>
+				<title>TEST2</title>
+                      <long_title>TEST2 titre long</long_title>
+			</Attributes>
+		</ContentObject>
+		<ContentObject contentClass="folder" remoteID="TEST3"
+			sort_order="asc" sort_field="priority">
+			<Attributes>
+				<title>TEST3</title>
+                      <long_title>TEST3 titre long</long_title>
+			</Attributes>
+		</ContentObject>
+	</CreateContent>
+		
+    <CreateContent parentNode="remote_id_node_id:NOS_SERVICES" priorityMode="auto">
+        <ContentObject remoteID="FAKE_reference1" contentClass="article">
+            <Attributes>
+                <title>DICT</title>
+                <long_title>Le partenaire DICT</long_title>
+                <accroche>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean in arcu non risus interdum fringilla et sed nibh. Cras mattis, nisl vitae commodo pharetra, velit risus sodales ante, vitae ultrices felis mauris a diam. Ut justo ligula, malesuada in rhoncus ac, varius vel nibh</accroche>
+                <visuels>remote_id:LOGO_DICT_FR</visuels>
+            </Attributes>
+        </ContentObject>
+        <ContentObject remoteID="FAKE_reference2" contentClass="article">
+            <Attributes>
+                <title>LVDR</title>
+                <long_title>La vie des réseaux</long_title>
+                <accroche>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean in arcu non risus interdum fringilla et sed nibh. Cras mattis, nisl vitae commodo pharetra, velit risus sodales ante, vitae ultrices felis mauris a diam. Ut justo ligula, malesuada in rhoncus ac, varius vel nibh</accroche>
+                <visuels>remote_id:LOGO_LVDR</visuels>
+            </Attributes>
+        </ContentObject>
+        <ContentObject remoteID="FAKE_reference3" contentClass="article">
+            <Attributes>
+                <title>DC</title>
+                <long_title>Déclarer chantier</long_title>
+                <accroche>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean in arcu non risus interdum fringilla et sed nibh. Cras mattis, nisl vitae commodo pharetra, velit risus sodales ante, vitae ultrices felis mauris a diam. Ut justo ligula, malesuada in rhoncus ac, varius vel nibh</accroche>
+                <visuels>LOGO_DECLARER_CHANTIER</visuels>
+            </Attributes>
+        </ContentObject>
+        <ContentObject remoteID="FAKE_reference4" contentClass="article">
+            <Attributes>
+                <title>SHERPA</title>
+                <long_title>Le partenaire SHERPA</long_title>
+                <accroche>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean in arcu non risus interdum fringilla et sed nibh. Cras mattis, nisl vitae commodo pharetra, velit risus sodales ante, vitae ultrices felis mauris a diam. Ut justo ligula, malesuada in rhoncus ac, varius vel nibh</accroche>
+                <visuels>remote_id:LOGO_CDI_SHERPA</visuels>
+            </Attributes>
+        </ContentObject>
+    </CreateContent>    
+    
+    <ProccessInformation comment="MAJ de Qui sommes nous" />
+    <CreateContent parentNode="2">
+		<ContentObject remoteID="PRESENTATION" contentClass="article">
+            <Attributes>
+                <title>Présentation</title>
+                <long_title>Qui sommes nous ?</long_title>
+                <accroche>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean in arcu non risus interdum fringilla et sed nibh. Cras mattis, nisl vitae commodo pharetra, velit risus sodales ante, vitae ultrices felis mauris a diam. Ut justo ligula, malesuada in rhoncus ac, varius vel nibh</accroche>
+                <visuels>remote_id:SOGELINK_QUI_SOMMES_NOUS</visuels>
+                <body fullxml="true" parseReferences="true"><![CDATA[<?xml version="1.0" encoding="UTF-8"?><section xmlns:image="http://ez.no/namespaces/ezpublish3/image/" xmlns:xhtml="http://ez.no/namespaces/ezpublish3/xhtml/" xmlns:custom="http://ez.no/namespaces/ezpublish3/custom/"><section><paragraph>Aenean in arcu non risus interdum fringilla et sed nibh. Cras mattis, nisl vitae commodo pharetra, velit risus sodales ante, vitae ultrices felis mauris a diam. Ut justo ligula, malesuada in rhoncus ac, varius vel nibh. Praesent posuere, dui laoreet dictum euismod, urna justo sagittis eros, id luctus lacus dolor eu metus. Donec vitae scelerisque velit.</paragraph><paragraph/><paragraph><header type="3">At vero eos et accysam et justo</header></paragraph><paragraph/><paragraph align="left"><embed-inline view="embed-inline" align="right" size="large" object_id="[remote_id:SOGELINK_QUI_SOMMES_NOUS]"/>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean in arcu non risus interdum fringilla et sed nibh. Cras mattis, nisl vitae commodo pharetra, velit risus sodales ante, vitae ultrices felis mauris a diam. Ut justo ligula, malesuada in rhoncus ac, varius vel nibh. Praesent posuere, dui laoreet dictum euismod, urna justo sagittis eros, id luctus lacus dolor eu metus. Donec vitae scelerisque velit. In hac habitasse platea dictumst. Aenean congue molestie sem et cursus. Suspendisse potenti. Nullam porta metus quis nisi ultrices egestas. Ut convallis nibh ac dui viverra sed convallis ante mattis. In lectus lacus, commodo eget laoreet viverra, mattis ac velit.Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean in arcu non risus interdum fringilla et sed nibh. Cras mattis, nisl vitae commodo pharetra, velit risus sodales ante, vitae ultrices felis mauris a diam. Ut justo ligula, malesuada in rhoncus ac, varius vel nibh. Praesent posuere, dui laoreet dictum euismod, urna justo sagittis eros, id luctus lacus dolor eu metus. Donec vitae scelerisque velit. In hac habitasse platea dictumst. Aenean congue molestie sem et cursus. Suspendisse potenti. Nullam porta metus quis nisi ultrices egestas. Ut convallis nibh ac dui viverra sed convallis ante mattis. In lectus lacus, commodo eget laoreet viverra, mattis ac velit.</paragraph><paragraph><header type="3">Les autres sites de Sogelinks</header></paragraph><paragraph><embed view="embed" object_id="[remote_id:QUI_SOMMES_NOUS_VIDEO]"/></paragraph><paragraph><table border="0" width="100%" custom:summary="&amp;quot;arqrzqe" custom:caption="" class="mise-en-page"><tr><td><paragraph>Lorem ipsum </paragraph></td><td><paragraph> <embed view="embed" object_id="[remote_id:LOGO_LVDR]"/>Lorem ipsum</paragraph></td><td><paragraph><embed view="embed" object_id="[remote_id:LOGO_DICT_FR]Lorem ipsum "/></paragraph></td>
+                <td><paragraph>Lorem ipsum <embed view="embed" object_id="[remote_id:LOGO_CDI_SHERPA]"/></paragraph></td><td><paragraph>Lorem ipsum <embed view="embed" object_id="[remote_id:LOGO_DECLARER_CHANTIER]"/></paragraph></td></tr></table></paragraph></section></section>]]></body>
+            </Attributes>
+        </ContentObject>    
+    </CreateContent>
+    
+    <ProccessInformation comment="Colonne de droite" />
+    <CreateContent parentNode="remote_id_node_id:COLONNE_DROITE" priorityMode="auto">
+        <ContentObject remoteID="CE_QUIL_FAUT_SAVOIR" contentClass="link">
+            <Attributes>
+                <title>DICT ce qu'il faut savoir !</title>
+                <visuels>remote_id:BANNIERE</visuels>
+                <cible>remote_id:PRESENTATION</cible>
+            </Attributes>
+        </ContentObject>    
+        <ContentObject remoteID="GREEN_TO_GO" contentClass="link">
+            <Attributes>
+                <title>Green to go</title>
+                <visuels>remote_id:BANNIERE_GREEN</visuels>
+                <cible>remote_id:PRESENTATION</cible>
+            </Attributes>
+        </ContentObject>  
+        <ContentObject remoteID="VIDE" contentClass="link">
+            <Attributes>
+                <title>Vide</title>
+                <visuels>remote_id:BANNIERE_VIDE</visuels>
+                <cible>remote_id:PRESENTATION</cible>
+            </Attributes>
+        </ContentObject> 
+    </CreateContent>
+    
+    <ProccessInformation comment="Footer" />
+    <CreateContent parentNode="2" priorityMode="auto">
+        <ContentObject remoteID="FOOTER" contentClass="folder">
+            <Attributes>
+                <accroche parseReferences="true">
+                	<![CDATA[
+                		<ul>
+						  <li><link href="http://test.com"><embed view="embed" size="medium" object_id="[remote_id:PART1]" /></link></li>
+						  <li><embed view="embed" size="medium" object_id="[remote_id:PART2]" /></li>
+						  <li><embed view="embed" size="medium" object_id="[remote_id:PART3]" /></li>
+						  <li><link target="_blank" href="http://test.com"><embed view="embed" size="medium" object_id="[remote_id:PART4]" /></link></li>
+						  <li><link href="http://test.com"><embed view="embed" size="medium" object_id="[remote_id:PART5]" /></link></li>
+						  <li><embed view="embed" size="medium" object_id="[remote_id:PART6]" /></li>
+						  <li><embed view="embed" size="medium" object_id="[remote_id:PART7]" /></li>
+						  <li><embed view="embed" size="medium" object_id="[remote_id:PART8]" /></li>
+						  <li><embed view="embed" size="medium" object_id="[remote_id:PART9]" /></li>
+						  <li><embed view="embed" size="medium" object_id="[remote_id:PART10]" /></li>
+						</ul>
+                	]]>
+                </accroche>
+                <description>
+                	<![CDATA[
+                		<table class="mise-en-page" border="0" width="100%" custom:summary="'tefssdfds">
+						  <tr>
+						    <td>
+						      <header level="2"><strong>A PROPOS De ANO-Congo</strong></header>
+						<link href="eznode://60">Lorem ipsum</link>
+						
+						<link href="eznode://60">Lorem ipsum</link>
+						
+						<link href="eznode://60">Lorem ipsum</link>
+						
+						<link href="eznode://60">Lorem ipsum</link>
+						    </td>
+						    <td>
+						      <header level="2"><strong>NOS SERVICES</strong></header>
+						<link href="eznode://60">Lorem ipsum</link>
+						
+						<link href="eznode://60">Lorem ipsum</link>
+						
+						<link href="eznode://60">Lorem ipsum</link>
+						    </td>
+						    <td>
+						      <header level="2"><strong>PLUS D'INFORMATION</strong></header>
+						<link href="eznode://60">Lorem ipsum</link>
+						
+						<link href="eznode://60">Lorem ipsum</link>
+						
+						<link href="eznode://60">Lorem ipsum</link>
+						
+						
+						    </td>
+						    <td><strong>CONTACTS DIRECTS</strong>
+						
+						lorem ipsum lorem ipsum lorem ipsum Lorem ipsum lorem ipsum lorem ipsum lorem ipsum
+						
+						contact@anocongo.org</td>
+						  </tr>
+						</table>
+                	]]>
+                </description>
+                <visuels>remote_id:BANNIERE</visuels>
+            </Attributes>
+        </ContentObject>    
+    </CreateContent>
+    
+    <ProccessInformation comment="COMMENTAIRES" />
+    <CreateContent parentNode="2" priorityMode="auto">
+        <ContentObject remoteID="COMMENTAIRE" contentClass="folder">
+            <Attributes>
+                <title>Commentaire</title>
+            </Attributes>
+			<Childs>
+				<ContentObject contentClass="comment" remoteID="COMMENT1"
+					sort_order="asc" sort_field="priority">
+					<Attributes>
+						<subject>Comment1</subject>
+                        <author>Auteur1</author>
+                        <message>orem ipsum dolor sit amet, consectetur adipiscing elit. Aenean in arcu </message>
+					</Attributes>
+				</ContentObject>
+				<ContentObject contentClass="comment" remoteID="COMMENT2"
+					sort_order="asc" sort_field="priority">
+					<Attributes>
+						<subject>Comment2</subject>
+                        <author>Auteur2</author>
+                        <message>orem ipsum dolor sit amet, consectetur adipiscing elit. Aenean in arcu </message>
+					</Attributes>
+				</ContentObject>
+				<ContentObject contentClass="comment" remoteID="COMMENT3"
+					sort_order="asc" sort_field="priority">
+					<Attributes>
+						<subject>Comment3</subject>
+                        <author>Auteur3</author>
+                        <message>orem ipsum dolor sit amet, consectetur adipiscing elit. Aenean in arcu </message>
+					</Attributes>
+				</ContentObject>
+				<ContentObject contentClass="comment" remoteID="COMMENT4"
+					sort_order="asc" sort_field="priority">
+					<Attributes>
+						<subject>Comment4</subject>
+                        <author>Auteur1</author>
+                        <message>orem ipsum dolor sit amet, consectetur adipiscing elit. Aenean in arcu </message>
+					</Attributes>
+				</ContentObject>
+				<ContentObject contentClass="comment" remoteID="COMMENT5"
+					sort_order="asc" sort_field="priority">
+					<Attributes>
+						<subject>Comment5</subject>
+                        <author>Auteur3</author>
+                        <message>orem ipsum dolor sit amet, consectetur adipiscing elit. Aenean in arcu </message>
+					</Attributes>
+				</ContentObject>
+				<ContentObject contentClass="comment" remoteID="COMMENT6"
+					sort_order="asc" sort_field="priority">
+					<Attributes>
+						<subject>Comment6</subject>
+                        <author>Auteur4</author>
+                        <message>orem ipsum dolor sit amet, consectetur adipiscing elit. Aenean in arcu </message>
+					</Attributes>
+				</ContentObject>
+				<ContentObject contentClass="comment" remoteID="COMMENT7"
+					sort_order="asc" sort_field="priority">
+					<Attributes>
+						<subject>Comment7</subject>
+                        <author>Auteur2</author>
+                        <message>orem ipsum dolor sit amet, consectetur adipiscing elit. Aenean in arcu </message>
+					</Attributes>
+				</ContentObject>
+				<ContentObject contentClass="comment" remoteID="COMMENT8"
+					sort_order="asc" sort_field="priority">
+					<Attributes>
+						<subject>Comment8</subject>
+                        <author>Auteur2</author>
+                        <message>orem ipsum dolor sit amet, consectetur adipiscing elit. Aenean in arcu </message>
+					</Attributes>
+				</ContentObject>
+				<ContentObject contentClass="comment" remoteID="COMMENT9"
+					sort_order="asc" sort_field="priority">
+					<Attributes>
+						<subject>Comment9</subject>
+                        <author>Auteur8</author>
+                        <message>orem ipsum dolor sit amet, consectetur adipiscing elit. Aenean in arcu </message>
+					</Attributes>
+				</ContentObject>
+				<ContentObject contentClass="comment" remoteID="COMMENT10"
+					sort_order="asc" sort_field="priority">
+					<Attributes>
+						<subject>Comment10</subject>
+                        <author>Auteur4</author>
+                        <message>orem ipsum dolor sit amet, consectetur adipiscing elit. Aenean in arcu </message>
+					</Attributes>
+				</ContentObject>
+				<ContentObject contentClass="comment" remoteID="COMMENT11"
+					sort_order="asc" sort_field="priority">
+					<Attributes>
+						<subject>Comment11</subject>
+                        <author>Auteur5</author>
+                        <message>orem ipsum dolor sit amet, consectetur adipiscing elit. Aenean in arcu </message>
+					</Attributes>
+				</ContentObject>
+			</Childs>
+       	</ContentObject>
+  	</CreateContent>   
+</eZXMLImporter>
