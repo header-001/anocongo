@@ -162,6 +162,7 @@
                 <SolrBase>
                     <SearchServerURI>
                         <global>http://127.0.0.1:8983/solr/anocongo</global>
+                        <makis>http://127.0.0.1:8983/solr/ano</makis>
                     </SearchServerURI>
                 </SolrBase>
             </file>

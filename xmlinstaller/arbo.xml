@@ -91,5 +91,12 @@
                 </ContentObject>
 			</Childs>
 		</ContentObject>
+        <ContentObject contentClass="folder" remoteID="ONGS"
+            sort_order="asc" sort_field="priority">
+            <Attributes>
+                <title>Ong</title>
+                <in_menu>0</in_menu>
+            </Attributes>
+        </ContentObject>
 	</CreateContent>
 </eZXMLImporter>
