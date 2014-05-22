@@ -1,428 +1,482 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<eZXMLImporter>
+<eZXMLImporter xmlns="http://ez.no/URI/xmlinstaller/0.1.5">
 	<CreateClass>
-		<ContentClass identifier="article" classExistAction="replace"
-			isContainer="true" objectNamePattern="&lt;title&gt;" urlAliasPattern="&lt;seo|title&gt;">
-			<Names fre-FR="Article"></Names>
+		<ContentClass classExistAction="replace" urlAliasPattern="&lt;seo|title&gt;" objectNamePattern="&lt;title&gt;"  identifier="folder" isContainer="true">
+			<Names fre-FR="Dossier"/>
 			<Groups>
-				<Group name="Contenu" />
+				<Group name="Content"/>
 			</Groups>
 			<Attributes>
-				<Attribute identifier="title" datatype="ezstring"
-					required="true" searchable="true">
-					<Names fre-FR="Titre" />
-					<DatatypeParameters>
-						<max-length>255</max-length>
-						<default-string></default-string>
-					</DatatypeParameters>
+				<Attribute identifier="title" translatable="true" informationCollector="false" searchable="true" required="true" datatype="ezstring">
+					<Names fre-FR="Titre">
+						<DatatypeParameters>
+							<max-length>255</max-length>
+							<default-string/>
+						</DatatypeParameters>
+					</Names>
 				</Attribute>
-				<Attribute identifier="long_title" datatype="ezstring"
-					searchable="true">
-					<Names fre-FR="Titre long" />
-					<DatatypeParameters>
-						<max-length>255</max-length>
-						<default-string></default-string>
-					</DatatypeParameters>
+				<Attribute identifier="long_title" translatable="true" informationCollector="false" searchable="true" required="false" datatype="ezstring">
+					<Names fre-FR="Titre long">
+						<DatatypeParameters>
+							<max-length>255</max-length>
+							<default-string/>
+						</DatatypeParameters>
+					</Names>
 				</Attribute>
-				<Attribute identifier="accroche" datatype="ezxmltext"
-					searchable="true">
-					<Names fre-FR="Accroche" />
-					<DatatypeParameters>
-						<text-column-count>5</text-column-count>
-					</DatatypeParameters>
+				<Attribute identifier="accroche" translatable="true" informationCollector="false" searchable="true" required="false" datatype="ezxmltext">
+					<Names fre-FR="Accroche">
+						<DatatypeParameters>
+							<text-column-count>5</text-column-count>
+						</DatatypeParameters>
+					</Names>
 				</Attribute>
-				<Attribute identifier="body" datatype="ezxmltext"
-					searchable="true">
-					<Names fre-FR="Contenu" />
-					<DatatypeParameters>
-						<text-column-count>5</text-column-count>
-					</DatatypeParameters>
+				<Attribute identifier="description" translatable="true" informationCollector="false" searchable="true" required="false" datatype="ezxmltext">
+					<Names fre-FR="Description">
+						<DatatypeParameters>
+							<text-column-count>5</text-column-count>
+						</DatatypeParameters>
+					</Names>
 				</Attribute>
-				<Attribute identifier="visuels" datatype="ezobjectrelationlist"
-					translatable="false">
-					<Names fre-FR="Visuels" />
-					<DatatypeParameters>
-						<default-placement node-id="51" />
-						<selection-type>0</selection-type>
-						<type>2</type>
-						<allowed-class>
-							<contentclass-identifier>image</contentclass-identifier>
-							<contentclass-identifier>video</contentclass-identifier>
-						</allowed-class>
-						<class-constraints>
-							<class-constraint class-identifier="image" />
-							<class-constraint class-identifier="video" />
-						</class-constraints>
-					</DatatypeParameters>
+				<Attribute identifier="visuels" translatable="false" informationCollector="false" searchable="false" required="false" datatype="ezobjectrelationlist">
+					<Names fre-FR="Visuels">
+						<DatatypeParameters>
+							<default-placement node-id="51">
+								<type>2</type>
+								<class-constraints>
+									<class-constraint class-identifier="image"/>
+								</class-constraints>
+								<selection-type>0</selection-type>
+							</default-placement>
+						</DatatypeParameters>
+					</Names>
 				</Attribute>
-				<Attribute identifier="date_publication" datatype="ezdatetime"
-					searchable="true" translatable="false">
-					<Names fre-FR="Date de publication" />
-					<DatatypeParameters>
-						<default-value>current-date</default-value>
-					</DatatypeParameters>
+				<Attribute identifier="show_children" translatable="false" informationCollector="false" searchable="false" required="false" datatype="ezboolean">
+					<Names fre-FR="Afficher les enfants">
+						<DatatypeParameters>
+							<default-value is-set="false"/>
+						</DatatypeParameters>
+					</Names>
 				</Attribute>
-				<Attribute identifier="date_fin_publication" datatype="ezdatetime"
-					searchable="true" translatable="false">
-					<Names fre-FR="Date de fin de publication" />
-					<DatatypeParameters>
-						<default-value>empty</default-value>
-					</DatatypeParameters>
+				<Attribute identifier="in_menu" translatable="false" informationCollector="false" searchable="true" required="false" datatype="ezboolean">
+					<Names fre-FR="Afficher dans le menu">
+						<DatatypeParameters>
+							<default-value is-set="false"/>
+						</DatatypeParameters>
+					</Names>
 				</Attribute>
-				<Attribute identifier="in_menu" datatype="ezboolean"
-					searchable="true" translatable="false">
-					<Names fre-FR="Visible dans le(s) menu(s) ?" />
-					<DatatypeParameters>
-						<default-value is-set="true" />
-					</DatatypeParameters>
-				</Attribute>
-				<Attribute identifier="seo" datatype="xrowmetadata">
-					<Names fre-FR="Référencement" />
-					<DatatypeParameters></DatatypeParameters>
+				<Attribute identifier="seo" translatable="true" informationCollector="false" searchable="false" required="false" datatype="xrowmetadata">
+					<Names fre-FR="Référencement">
+						<DatatypeParameters/>
+					</Names>
 				</Attribute>
 			</Attributes>
 		</ContentClass>
-		<ContentClass identifier="folder" classExistAction="replace"
-			isContainer="true" objectNamePattern="&lt;title&gt;" urlAliasPattern="&lt;seo|title&gt;">
-			<Names fre-FR="Dossier" />
+		<ContentClass classExistAction="replace" urlAliasPattern="&lt;seo|title&gt;" objectNamePattern="&lt;title&gt;"   identifier="article" isContainer="true">
+		<Names fre-FR="Article"/>
+		<Groups>
+			<Group name="Content"/>
+		</Groups>
+		<Attributes>
+			<Attribute identifier="title" translatable="true" informationCollector="false" searchable="true" required="true" datatype="ezstring">
+				<Names fre-FR="Titre">
+					<DatatypeParameters>
+						<max-length>255</max-length>
+						<default-string/>
+					</DatatypeParameters>
+				</Names>
+			</Attribute>
+			<Attribute identifier="long_title" translatable="true" informationCollector="false" searchable="true" required="false" datatype="ezstring">
+				<Names fre-FR="Titre long">
+					<DatatypeParameters>
+						<max-length>255</max-length>
+						<default-string/>
+					</DatatypeParameters>
+				</Names>
+			</Attribute>
+			<Attribute identifier="accroche" translatable="true" informationCollector="false" searchable="true" required="false" datatype="ezxmltext">
+				<Names fre-FR="Accroche">
+					<DatatypeParameters>
+						<text-column-count>5</text-column-count>
+					</DatatypeParameters>
+				</Names>
+			</Attribute>
+			<Attribute identifier="body" translatable="true" informationCollector="false" searchable="true" required="false" datatype="ezxmltext">
+				<Names fre-FR="Corps">
+					<DatatypeParameters>
+						<text-column-count>5</text-column-count>
+					</DatatypeParameters>
+				</Names>
+			</Attribute>
+			<Attribute identifier="visuels" translatable="false" informationCollector="false" searchable="false" required="false" datatype="ezobjectrelationlist">
+				<Names fre-FR="Visuels">
+					<DatatypeParameters>
+						<default-placement node-id="51">
+							<type>2</type>
+							<class-constraints>
+								<class-constraint class-identifier="image"/>
+							</class-constraints>
+							<selection-type>0</selection-type>
+						</default-placement>
+					</DatatypeParameters>
+				</Names>
+			</Attribute>
+			<Attribute identifier="date_publication" translatable="false" informationCollector="false" searchable="true" required="false" datatype="ezdatetime">
+				<Names fre-FR="Date de publication">
+					<DatatypeParameters>
+						<default-value type="empty">
+							<use-seconds>0</use-seconds>
+						</default-value>
+					</DatatypeParameters>
+				</Names>
+			</Attribute>
+			<Attribute identifier="date_fin_publication" translatable="false" informationCollector="false" searchable="true" required="false" datatype="ezdatetime">
+				<Names fre-FR="Date de fin de publication">
+					<DatatypeParameters>
+						<default-value type="empty">
+							<use-seconds>0</use-seconds>
+						</default-value>
+					</DatatypeParameters>
+				</Names>
+			</Attribute>
+			<Attribute identifier="in_menu" translatable="false" informationCollector="false" searchable="true" required="false" datatype="ezboolean">
+				<Names fre-FR="Afficher dans le menu">
+					<DatatypeParameters>
+						<default-value is-set="true"/>
+					</DatatypeParameters>
+				</Names>
+			</Attribute>
+			<Attribute identifier="seo" translatable="true" informationCollector="false" searchable="false" required="false" datatype="xrowmetadata">
+				<Names fre-FR="Référencement">
+					<DatatypeParameters/>
+				</Names>
+			</Attribute>
+		</Attributes>
+	</ContentClass>
+	<ContentClass classExistAction="replace" urlAliasPattern="&lt;name|image&gt;" objectNamePattern="&lt;name|image&gt;" identifier="image" isContainer="false">
+		<Names fre-FR="Image" />
+		<Groups>
+			<Group id="3" name="Media"/>
+		</Groups>
+		<Attributes>
+			<Attribute identifier="name" translatable="true" informationCollector="false" searchable="true" required="true" datatype="ezstring">
+				<Names  fre-FR="Nom">
+					<DatatypeParameters>
+						<max-length>255</max-length>
+						<default-string/>
+					</DatatypeParameters>
+				</Names>
+			</Attribute>
+			<Attribute identifier="image" translatable="true" informationCollector="false" searchable="false" required="true" datatype="ezimage">
+				<Names  fre-FR="Image">
+					<DatatypeParameters>
+						<max-size unit-size="mega">5</max-size>
+					</DatatypeParameters>
+				</Names>
+			</Attribute>
+			<Attribute identifier="caption" translatable="true" informationCollector="false" searchable="true" required="false" datatype="ezstring">
+				<Names  fre-FR="Caption">
+					<DatatypeParameters>
+						<max-length>255</max-length>
+					</DatatypeParameters>
+				</Names>
+			</Attribute>
+			<Attribute identifier="description" translatable="true" informationCollector="false" searchable="true" required="false" datatype="ezxmltext">
+				<Names  fre-FR="Description">
+					<DatatypeParameters>
+						<text-column-count>5</text-column-count>
+					</DatatypeParameters>
+				</Names>
+			</Attribute>
+			<Attribute identifier="copyright" translatable="true" informationCollector="false" searchable="true" required="false" datatype="ezstring">
+				<Names  fre-FR="Copyright">
+					<DatatypeParameters>
+						<max-length>255</max-length>
+						<default-string/>
+					</DatatypeParameters>
+				</Names>
+			</Attribute>
+		</Attributes>
+	</ContentClass>
+	<ContentClass classExistAction="replace" urlAliasPattern="&lt;title&gt;" objectNamePattern="&lt;title&gt;"  identifier="link" isContainer="false">
+			<Names fre-FR="Lien" />
 			<Groups>
-				<Group name="Contenu" />
+				<Group name="Content"/>
 			</Groups>
 			<Attributes>
-				<Attribute identifier="title" datatype="ezstring"
-					required="true" searchable="true">
-					<Names fre-FR="Titre" />
-					<DatatypeParameters>
-						<max-length>255</max-length>
-						<default-string></default-string>
-					</DatatypeParameters>
+				<Attribute identifier="title" translatable="true" informationCollector="false" searchable="true" required="true" datatype="ezstring">
+					<Names  fre-FR="Titre">
+						<DatatypeParameters>
+							<max-length>255</max-length>
+							<default-string/>
+						</DatatypeParameters>
+					</Names>
 				</Attribute>
-				<Attribute identifier="long_title" datatype="ezstring"
-					searchable="true">
-					<Names fre-FR="Titre long" />
-					<DatatypeParameters>
-						<max-length>255</max-length>
-						<default-string></default-string>
-					</DatatypeParameters>
+				<Attribute identifier="long_title" translatable="true" informationCollector="false" searchable="true" required="false" datatype="ezstring">
+					<Names  fre-FR="Titre long">
+						<DatatypeParameters>
+							<max-length>255</max-length>
+							<default-string/>
+						</DatatypeParameters>
+					</Names>
 				</Attribute>
-				<Attribute identifier="accroche" datatype="ezxmltext"
-					searchable="true">
-					<Names fre-FR="Accroche" />
-					<DatatypeParameters>
-						<text-column-count>5</text-column-count>
-					</DatatypeParameters>
+				<Attribute identifier="accroche" translatable="true" informationCollector="false" searchable="true" required="false" datatype="ezxmltext">
+					<Names  fre-FR="Accroche">
+						<DatatypeParameters>
+							<text-column-count>5</text-column-count>
+						</DatatypeParameters>
+					</Names>
 				</Attribute>
-				<Attribute identifier="description" datatype="ezxmltext"
-					searchable="true">
-					<Names fre-FR="Description" />
-					<DatatypeParameters>
-						<text-column-count>5</text-column-count>
-					</DatatypeParameters>
+				<Attribute identifier="visuels" translatable="false" informationCollector="false" searchable="false" required="false" datatype="ezobjectrelationlist">
+					<Names  fre-FR="Visuels">
+						<DatatypeParameters>
+							<default-placement node-id="51">
+								<type>2</type>
+								<class-constraints>
+									<class-constraint class-identifier="image"/>
+								</class-constraints>
+								<selection-type>0</selection-type>
+							</default-placement>
+						</DatatypeParameters>
+					</Names>
 				</Attribute>
-				<Attribute identifier="visuels" datatype="ezobjectrelationlist"
-					translatable="false">
-					<Names fre-FR="Visuels" />
-					<DatatypeParameters>
-						<default-placement node-id="51" />
-						<selection-type>0</selection-type>
-						<type>2</type>
-						<allowed-class>
-							<contentclass-identifier>image</contentclass-identifier>
-							<contentclass-identifier>video</contentclass-identifier>
-						</allowed-class>
-						<class-constraints>
-							<class-constraint class-identifier="image" />
-							<class-constraint class-identifier="video" />
-						</class-constraints>
-					</DatatypeParameters>
+				<Attribute identifier="cible" translatable="false" informationCollector="false" searchable="false" required="false" datatype="ezobjectrelation">
+					<Names  fre-FR="Cible">
+						<DatatypeParameters>
+							<selection-type id="0">
+								<fuzzy-match id="0">
+									<default-selection node-id="2"/>
+								</fuzzy-match>
+							</selection-type>
+						</DatatypeParameters>
+					</Names>
 				</Attribute>
-				<Attribute identifier="show_children" datatype="ezboolean"
-					translatable="false">
-					<Names fre-FR="Afficher les enfants ?" />
-					<DatatypeParameters>
-						<default-value>0</default-value>
-					</DatatypeParameters>
+				<Attribute identifier="location" translatable="true" informationCollector="false" searchable="false" required="false" datatype="ezurl">
+					<Names  fre-FR="Localisation">
+						<DatatypeParameters/>
+					</Names>
 				</Attribute>
-				<Attribute identifier="in_menu" datatype="ezboolean"
-					searchable="true" translatable="false">
-					<Names fre-FR="Visible dans le(s) menu(s) ?" />
-					<DatatypeParameters>
-						<default-value is-set="false" />
-					</DatatypeParameters>
+				<Attribute identifier="nouvel_onglet" translatable="false" informationCollector="false" searchable="false" required="false" datatype="ezboolean">
+					<Names  fre-FR="Ouvrir dans un nouvel onglet">
+						<DatatypeParameters>
+							<default-value is-set="false"/>
+						</DatatypeParameters>
+					</Names>
 				</Attribute>
-				<Attribute identifier="seo" datatype="xrowmetadata">
-					<Names fre-FR="Référencement" />
-					<DatatypeParameters></DatatypeParameters>
+				<Attribute identifier="in_menu" translatable="false" informationCollector="false" searchable="true" required="false" datatype="ezboolean">
+					<Names  fre-FR="Afficher dans le menu">
+						<DatatypeParameters>
+							<default-value is-set="false"/>
+						</DatatypeParameters>
+					</Names>
 				</Attribute>
 			</Attributes>
 		</ContentClass>
-		
-		<ContentClass identifier="link" classExistAction="replace"
-			objectNamePattern="&lt;title&gt;" urlAliasPattern="&lt;title&gt;">
-			<Names fre-FR="Lien"></Names>
+		<ContentClass classExistAction="replace" urlAliasPattern="&lt;name&gt;" objectNamePattern="&lt;name&gt;"  identifier="file" isContainer="false">
+		<Names fre-FR="Ficher" />
+		<Groups>
+		<Group id="3" name="Media"/>
+		</Groups>
+		<Attributes>
+		<Attribute identifier="name" translatable="true" informationCollector="false" searchable="true" required="true" datatype="ezstring">
+		<Names  fre-FR="Nom">
+		<DatatypeParameters>
+		<max-length>255</max-length>
+		<default-string/>
+		</DatatypeParameters>
+		</Names>
+		</Attribute>
+		<Attribute identifier="description" translatable="true" informationCollector="false" searchable="true" required="false" datatype="ezxmltext">
+		<Names  fre-FR="Description">
+		<DatatypeParameters>
+		<text-column-count>5</text-column-count>
+		</DatatypeParameters>
+		</Names>
+		</Attribute>
+		<Attribute identifier="file" translatable="true" informationCollector="false" searchable="true" required="true" datatype="ezbinaryfile">
+		<Names  fre-FR="Fichier">
+		<DatatypeParameters>
+		<max-size unit-size="mega">15</max-size>
+		</DatatypeParameters>
+		</Names>
+		</Attribute>
+		<Attribute identifier="visuel" translatable="true" informationCollector="false" searchable="false" required="false" datatype="ezobjectrelation">
+		<Names  fre-FR="Visuel">
+		<DatatypeParameters>
+		<selection-type id="0">
+		<fuzzy-match id="0">
+		<default-selection node-id="51"/>
+		</fuzzy-match>
+		</selection-type>
+		</DatatypeParameters>
+		</Names>
+		</Attribute>
+		</Attributes>
+		</ContentClass>
+		<ContentClass classExistAction="replace" urlAliasPattern="" objectNamePattern="&lt;subject&gt;" identifier="comment" isContainer="false">
+		<Names fre-FR="Commentaire" />
+		<Groups>
+		<Group name="Content"/>
+		</Groups>
+		<Attributes>
+		<Attribute identifier="subject" translatable="true" informationCollector="false" searchable="true" required="true" datatype="ezstring">
+		<Names fre-FR="Subject" >
+		<DatatypeParameters>
+		<max-length>100</max-length>
+		<default-string/>
+		</DatatypeParameters>
+		</Names>
+		</Attribute>
+		<Attribute identifier="author" translatable="true" informationCollector="false" searchable="true" required="true" datatype="ezstring">
+		<Names fre-FR="Auteur" >
+		<DatatypeParameters>
+		<max-length>0</max-length>
+		<default-string/>
+		</DatatypeParameters>
+		</Names>
+		</Attribute>
+		<Attribute identifier="message" translatable="true" informationCollector="false" searchable="true" required="true" datatype="eztext">
+		<Names fre-FR="Message" >
+		<DatatypeParameters>
+		<text-column-count>20</text-column-count>
+		</DatatypeParameters>
+		</Names>
+		</Attribute>
+		</Attributes>
+		</ContentClass>
+		<ContentClass classExistAction="new" urlAliasPattern="&lt;seo|title&gt;" objectNamePattern="&lt;title&gt;" identifier="contact" isContainer="false">
+			<Names fre-FR="Formulaire de contact"/>
 			<Groups>
-				<Group name="Contenu" />
+			<Group name="Content"/>
 			</Groups>
 			<Attributes>
-				<Attribute identifier="title" datatype="ezstring"
-					required="true" searchable="true">
-					<Names fre-FR="Titre" />
-					<DatatypeParameters>
-						<max-length>255</max-length>
-						<default-string></default-string>
-					</DatatypeParameters>
+				<Attribute identifier="title" translatable="true" informationCollector="false" searchable="true" required="true" datatype="ezstring">
+				<Names fre-FR="Titre">
+				<DatatypeParameters>
+				<max-length>255</max-length>
+				<default-string/>
+				</DatatypeParameters>
+				</Names>
 				</Attribute>
-				<Attribute identifier="long_title" datatype="ezstring"
-					searchable="true">
-					<Names fre-FR="Titre long" />
-					<DatatypeParameters>
-						<max-length>255</max-length>
-						<default-string></default-string>
-					</DatatypeParameters>
+				<Attribute identifier="long_title" translatable="true" informationCollector="false" searchable="true" required="false" datatype="ezstring">
+				<Names fre-FR="Titre long">
+				<DatatypeParameters>
+				<max-length>255</max-length>
+				<default-string/>
+				</DatatypeParameters>
+				</Names>
 				</Attribute>
-				<Attribute identifier="accroche" datatype="ezxmltext"
-					searchable="true">
-					<Names fre-FR="Accroche" />
-					<DatatypeParameters>
-						<text-column-count>5</text-column-count>
-					</DatatypeParameters>
+				<Attribute identifier="accroche" translatable="true" informationCollector="false" searchable="true" required="false" datatype="ezxmltext">
+				<Names fre-FR="Accroche">
+				<DatatypeParameters>
+				<text-column-count>5</text-column-count>
+				</DatatypeParameters>
+				</Names>
 				</Attribute>
-				<Attribute identifier="visuels" datatype="ezobjectrelationlist"
-					translatable="false">
-					<Names fre-FR="Visuels" />
-					<DatatypeParameters>
-						<default-placement node-id="51" />
-						<selection-type>0</selection-type>
-						<type>2</type>
-						<allowed-class>
-							<contentclass-identifier>image</contentclass-identifier>
-							<contentclass-identifier>video</contentclass-identifier>
-						</allowed-class>
-						<class-constraints>
-							<class-constraint class-identifier="image" />
-							<class-constraint class-identifier="video" />
-						</class-constraints>
-					</DatatypeParameters>
+				<Attribute identifier="intro" translatable="true" informationCollector="false" searchable="true" required="false" datatype="ezxmltext">
+				<Names fre-FR="Intro">
+				<DatatypeParameters>
+				<text-column-count>5</text-column-count>
+				</DatatypeParameters>
+				</Names>
 				</Attribute>
-				<Attribute identifier="cible" datatype="ezobjectrelation"
-					translatable="false">
-					<Names fre-FR="Lien interne" />
-					<DatatypeParameters>
-						<selection-type id="0" />
-						<default-selection node-id="2" />
-					</DatatypeParameters>
+				<Attribute identifier="confirm" translatable="true" informationCollector="false" searchable="false" required="true" datatype="ezxmltext">
+				<Names fre-FR="">
+				<DatatypeParameters>
+				<text-column-count>5</text-column-count>
+				</DatatypeParameters>
+				</Names>
 				</Attribute>
-				<Attribute identifier="location" datatype="ezurl">
-					<Names fre-FR="URL" />
-					<DatatypeParameters></DatatypeParameters>
+				<Attribute identifier="destinataire" translatable="true" informationCollector="false" searchable="false" required="false" datatype="ezemail">
+				<Names fre-FR="Destinataire">
+				<DatatypeParameters>
+				</DatatypeParameters>
+				</Names>
 				</Attribute>
-				<Attribute identifier="nouvel_onglet" datatype="ezboolean"
-					translatable="false">
-					<Names fre-FR="Ouvrir dans un nouvel onglet ?" />
-					<DatatypeParameters>
-						<default-value is-set="false" />
-					</DatatypeParameters>
+				<Attribute identifier="nom" translatable="true" informationCollector="true" searchable="false" required="true" datatype="ezstring">
+				<Names fre-FR="Nom">
+				<DatatypeParameters>
+				<max-length>255</max-length>
+				<default-string/>
+				</DatatypeParameters>
+				</Names>
 				</Attribute>
-				<Attribute identifier="in_menu" datatype="ezboolean"
-					searchable="true" translatable="false">
-					<Names fre-FR="Visible dans le(s) menu(s) ?" />
-					<DatatypeParameters>
-						<default-value is-set="false" />
-					</DatatypeParameters>
+				<Attribute identifier="prenom" translatable="true" informationCollector="true" searchable="false" required="true" datatype="ezstring">
+				<Names fre-FR="">
+				<DatatypeParameters>
+				<max-length>255</max-length>
+				<default-string/>
+				</DatatypeParameters>
+				</Names>
 				</Attribute>
-			</Attributes>
-		</ContentClass>
-		<ContentClass identifier="image" classExistAction="replace"
-			objectNamePattern="&lt;name|image&gt;" urlAliasPattern="&lt;name|image&gt;">
-			<Names fre-FR="Image"></Names>
-			<Groups>
-				<Group name="Media" />
-			</Groups>
-			<Attributes>
-				<Attribute identifier="name" datatype="ezstring" required="true"
-					searchable="true">
-					<Names fre-FR="Nom" />
-					<DatatypeParameters>
-						<max-length>255</max-length>
-						<default-string></default-string>
-					</DatatypeParameters>
+				<Attribute identifier="email" translatable="true" informationCollector="true" searchable="false" required="true" datatype="ezemail">
+				<Names fre-FR="Email">
+				<DatatypeParameters>
+				</DatatypeParameters>
+				</Names>
 				</Attribute>
-				<Attribute identifier="image" datatype="ezimage" required="true">
-					<Names fre-FR="Image" />
-					<DatatypeParameters>
-						<max-size>5</max-size>
-					</DatatypeParameters>
+				<Attribute identifier="telephone" translatable="true" informationCollector="true" searchable="false" required="true" datatype="ezstring">
+				<Names fre-FR="T%C3%A9l%C3%A9phone">
+				<DatatypeParameters>
+				<max-length>255</max-length>
+				<default-string/>
+				</DatatypeParameters>
+				</Names>
 				</Attribute>
-				<Attribute identifier="caption" datatype="ezstring"
-					searchable="true">
-					<Names fre-FR="Légende" />
-					<DatatypeParameters>
-						<max-length>255</max-length>
-						<default-string></default-string>
-					</DatatypeParameters>
+				<Attribute identifier="fax" translatable="true" informationCollector="true" searchable="false" required="true" datatype="ezstring">
+				<Names fre-FR="Fax">
+				<DatatypeParameters>
+				<max-length>255</max-length>
+				<default-string/>
+				</DatatypeParameters>
+				</Names>
 				</Attribute>
-				<Attribute identifier="description" datatype="ezxmltext"
-					searchable="true">
-					<Names fre-FR="Description" />
-					<DatatypeParameters>
-						<text-column-count>5</text-column-count>
-					</DatatypeParameters>
+				<Attribute identifier="message" translatable="true" informationCollector="true" searchable="false" required="true" datatype="eztext">
+				<Names fre-FR="Message">
+				<DatatypeParameters>
+				<text-column-count>5</text-column-count>
+				</DatatypeParameters>
+				</Names>
 				</Attribute>
-				<Attribute identifier="copyright" datatype="ezstring"
-					searchable="true">
-					<Names fre-FR="Copyright"></Names>
-					<DatatypeParameters>
-						<max-length>255</max-length>
-						<default-string></default-string>
-					</DatatypeParameters>
+				<Attribute identifier="in_menu" translatable="false" informationCollector="false" searchable="true" required="false" datatype="ezboolean">
+				<Names fre-FR="Afficher dans le menu">
+				<DatatypeParameters>
+				<default-value is-set="true"/>
+				</DatatypeParameters>
+				</Names>
 				</Attribute>
-			</Attributes>
-		</ContentClass>
-		<ContentClass identifier="file" classExistAction="replace"
-			objectNamePattern="&lt;name&gt;" urlAliasPattern="&lt;name&gt;">
-			<Names fre-FR="Fichier"></Names>
-			<Groups>
-				<Group name="Media" />
-			</Groups>
-			<Attributes>
-				<Attribute identifier="name" datatype="ezstring" required="true"
-					searchable="true">
-					<Names fre-FR="Nom" />
-					<DatatypeParameters>
-						<max-length>255</max-length>
-						<default-string></default-string>
-					</DatatypeParameters>
+				<Attribute identifier="seo" translatable="true" informationCollector="false" searchable="false" required="false" datatype="xrowmetadata">
+				<Names fre-FR="Référencement">
+				<DatatypeParameters>
+				</DatatypeParameters>
+				</Names>
 				</Attribute>
-				<Attribute identifier="description" datatype="ezxmltext"
-					searchable="true">
-					<Names fre-FR="Description" />
-					<DatatypeParameters>
-						<text-column-count>5</text-column-count>
-					</DatatypeParameters>
+				</Attributes>
+				</ContentClass>
+		<ContentClass classExistAction="new" urlAliasPattern="" objectNamePattern="&lt;nom&gt;" identifier="ong" isContainer="false">
+				<Names fre-FR="Ong"/>
+				<Groups>
+				<Group name="Content"/>
+				</Groups>
+				<Attributes>
+				<Attribute identifier="nom" translatable="true" informationCollector="false" searchable="true" required="true" datatype="ezstring">
+				<Names fre-FR="Nom">
+				<DatatypeParameters>
+				<max-length>0</max-length>
+				<default-string/>
+				</DatatypeParameters>
+				</Names>
 				</Attribute>
-				<Attribute identifier="file" datatype="ezbinaryfile"
-					required="true" searchable="true">
-					<Names fre-FR="Fichier" />
-					<DatatypeParameters>
-						<max-size>15</max-size>
-					</DatatypeParameters>
+				<Attribute identifier="province" translatable="true" informationCollector="false" searchable="false" required="false" datatype="eztags">
+				<Names fre-FR="Province">
+				<DatatypeParameters>
+				</DatatypeParameters>
+				</Names>
 				</Attribute>
-				<Attribute identifier="visuel" datatype="ezobjectrelation">
-					<Names fre-FR="Visuel" />
-					<DatatypeParameters>
-						<selection-type id="0" />
-						<default-selection node-id="51" />
-					</DatatypeParameters>
-				</Attribute>
-			</Attributes>
-		</ContentClass>
-		<ContentClass identifier="contact" classExistAction="replace"
-            isContainer="false" objectNamePattern="&lt;title&gt;"
-            urlAliasPattern="&lt;seo|title&gt;">
-            <Names fre-FR="Formulaire de contact"></Names>
-            <Groups>
-                <Group name="Contenu" />
-            </Groups>
-            <Attributes>
-                <Attribute identifier="title" datatype="ezstring"
-                    required="true" searchable="true">
-                    <Names fre-FR="Titre" />
-                    <DatatypeParameters>
-                        <max-length>255</max-length>
-                        <default-string></default-string>
-                    </DatatypeParameters>
-                </Attribute>
-                <Attribute identifier="long_title" datatype="ezstring"
-                    searchable="true">
-                    <Names fre-FR="Titre long" />
-                    <DatatypeParameters>
-                        <max-length>255</max-length>
-                        <default-string></default-string>
-                    </DatatypeParameters>
-                </Attribute>
-                <Attribute identifier="accroche" datatype="ezxmltext"
-                    searchable="true">
-                    <Names fre-FR="Accroche" />
-                    <DatatypeParameters>
-                        <text-column-count>5</text-column-count>
-                    </DatatypeParameters>
-                </Attribute>
-                <Attribute identifier="intro" datatype="ezxmltext"
-                    searchable="true">
-                    <Names fre-FR="Message d'introduction" />
-                    <DatatypeParameters>
-                        <text-column-count>5</text-column-count>
-                    </DatatypeParameters>
-                </Attribute>
-                <Attribute identifier="confirm" datatype="ezxmltext"
-                    searchable="false" required="true">
-                    <Names fre-FR="Message de confirmation" />
-                    <DatatypeParameters>
-                        <text-column-count>5</text-column-count>
-                    </DatatypeParameters>
-                </Attribute>
-                <Attribute identifier="destinataire" datatype="ezemail"
-                    searchable="false">
-                    <Names fre-FR="Destinataire" />
-                    <DatatypeParameters />
-                </Attribute>
-                <Attribute identifier="nom" datatype="ezstring"
-                    searchable="false" informationCollector="true" required="true">
-                    <Names fre-FR="Nom" />
-                    <DatatypeParameters>
-                        <max-length>255</max-length>
-                        <default-string></default-string>
-                    </DatatypeParameters>
-                </Attribute>
-                <Attribute identifier="prenom" datatype="ezstring"
-                    searchable="false" informationCollector="true" required="true">
-                    <Names fre-FR="Prénom" />
-                    <DatatypeParameters>
-                        <max-length>255</max-length>
-                        <default-string></default-string>
-                    </DatatypeParameters>
-                </Attribute>
-                <Attribute identifier="email" datatype="ezemail"
-                    searchable="false" informationCollector="true" required="true">
-                    <Names fre-FR="Email" />
-                    <DatatypeParameters />
-                </Attribute>
-                <Attribute identifier="telephone" datatype="ezstring"
-                    searchable="false" informationCollector="true" required="true">
-                    <Names fre-FR="Téléphone" />
-                    <DatatypeParameters>
-                        <max-length>255</max-length>
-                        <default-string></default-string>
-                    </DatatypeParameters>
-                </Attribute>
-                <Attribute identifier="fax" datatype="ezstring"
-                    searchable="false" informationCollector="true" required="true">
-                    <Names fre-FR="Fax" />
-                    <DatatypeParameters>
-                        <max-length>255</max-length>
-                        <default-string></default-string>
-                    </DatatypeParameters>
-                </Attribute>
-                <Attribute identifier="message" datatype="eztext" 
-                    searchable="false" informationCollector="true" required="true">
-                    <Names fre-FR="Votre message" />
-                    <DatatypeParameters>
-                        <text-column-count>5</text-column-count>
-                    </DatatypeParameters>
-                </Attribute>
-                <Attribute identifier="in_menu" datatype="ezboolean"
-                    searchable="true" translatable="false">
-                    <Names fre-FR="Visible dans le(s) menu(s) ?" />
-                    <DatatypeParameters>
-                        <default-value is-set="true" />
-                    </DatatypeParameters>
-                </Attribute>
                 <Attribute identifier="seo" datatype="xrowmetadata">
                     <Names fre-FR="Référencement" />
                     <DatatypeParameters></DatatypeParameters>
                 </Attribute>
-            </Attributes>
-        </ContentClass>
-
+			</Attributes>
+		</ContentClass>
 	</CreateClass>
 </eZXMLImporter>

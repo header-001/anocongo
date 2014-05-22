@@ -13,7 +13,7 @@ $cli->output('Demarrage du script cron_purge_contenu ');
 
 
 // lecture des paramétres 
-$prm = eZINI::instance( '__projet__.ini' );
+$prm = eZINI::instance( 'anocongo.ini' );
 $noeud_travail_id=$prm->variable('purge','noeud_travail_id');
 $classes_a_purger=Array(); 
 $classes_a_purger=$prm->variable('purge','classes_a_purger');

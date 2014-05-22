@@ -1,12 +1,12 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<eZXMLImporter xmlns="http://ez.no/URI/xmlinstaller/0.1.5" data_source="extension/__projet__/xmlinstaller/data">
+<eZXMLImporter xmlns="http://ez.no/URI/xmlinstaller/0.1.5" data_source="extension/anocongo/xmlinstaller/data">
     <ProccessInformation comment="Création des média" /> 
     
     <CreateContent parentNode="52">
         <ContentObject contentClass="file" remoteID="FAKE_pdf_poissons">
             <Attributes>
              <name>Lorem Ipsum</name>
-             <file>extension/__base__/xmlinstaller/contents/poissons.pdf</file>
+             <file>extension/basek/xmlinstaller/contents/poissons.pdf</file>
             </Attributes>
         </ContentObject>
     </CreateContent>

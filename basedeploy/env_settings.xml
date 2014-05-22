@@ -24,10 +24,9 @@
 				<ExtensionSettings>
 					<ActiveExtensions type="array">
 						<global>
-							<item>__projet__</item>
-							<item>__base__</item>
+							<item>anocongo</item>
+							<item>basekit</item>
 							<item>xrowmetadata</item>
-							<item>ezformtoken</item>
                             <item>ezxmlinstaller</item>
 							<item>ezless</item>
 							<item>ezjscore</item>
@@ -51,10 +50,10 @@
 					    <global>root</global>
 					</User>
 					<Password>
-						<makis></makis>
+						<makis>makis</makis>
 					</Password>
 					<Database>
-                        <global>ezp5_instance</global>
+                        <global>ano</global>
 					</Database>
 					<Charset>
 						<global></global>
@@ -98,16 +97,16 @@
 						</global>
 					</RelatedSiteAccessList>
                     <MatchOrder>
-                        <global>host</global>
+                        <global>host;uri</global>
                     </MatchOrder>
                     <HostMatchType>
                         <global>map</global>
                     </HostMatchType>
                     <HostMatchMapItems type="array" reset="true">
                         <makis>
-                            <item>ezp5_instance.legacy.makis;fr</item>
-                            <item>ezp5_instance.legacy.makis;en</item>
-                            <item>admin.ezp5_instance.legacy.makis;fr_admin</item>
+                            <item>ezp.ano.makis;fr</item>
+                            <item>ezp.ano.makis;en</item>
+                            <item>admin.ezp.ano.makis;fr_admin</item>
                         </makis>
                     </HostMatchMapItems>
 				</SiteAccessSettings>
@@ -127,18 +126,18 @@
 					</IsEnabled>
 					<ExecutablePath>
 						<global>/usr/bin</global>
-						<makis>C:\Program Files (x86)\ImageMagick-6.7.1-Q16</makis>
+						<!--  makis>C:\Program Files (x86)\ImageMagick-6.7.1-Q16</makis-->
 					</ExecutablePath>
 					<Executable>
 						<global>convert</global>
-						<makis>convert.exe</makis>
+						<!--makis>convert.exe</makis-->
 					</Executable>
-					<ExecutableWin32>
+					<!--ExecutableWin32>
 						<makis>convert.exe</makis>
-					</ExecutableWin32>
+					</ExecutableWin32-->
 				</ImageMagick>
 			</file>
-			<file name="heliodeploy.ini">
+			<file name="basedeploy.ini">
 				<ServerSettings>
 					<PHPExecPath>
 						<global>php</global>
@@ -148,7 +147,7 @@
             <file name="solr.ini">
                 <SolrBase>
                     <SearchServerURI>
-                        <makis>http://127.0.0.1:8983/solr</makis>
+                        <makis>http://127.0.0.1:8983/solr/ano</makis>
                     </SearchServerURI>
                 </SolrBase>
             </file>
@@ -157,10 +156,10 @@
 			<file name="site.ini">
 				<SiteSettings>
 					<SiteURL>
-						<makis>ezp5_instance.legacy.makis</makis>
+						<makis>ezp.ano.makis</makis>
 					</SiteURL>
 					<AdditionalLoginFormActionURL>
-						<makis>http://admin.ezp5_instance.legacy.makis/user/login</makis>
+						<makis>http://ezp.ano.makis/user/login</makis>
 					</AdditionalLoginFormActionURL>
 				</SiteSettings>
 				<DebugSettings>
@@ -222,10 +221,10 @@
 			<file name="site.ini">
 				<SiteSettings>
 					<SiteURL>
-						<makis>ezp5_instance.legacy.makis/en</makis>
+						<makis>ezp.ano.makis/en</makis>
 					</SiteURL>
 					<AdditionalLoginFormActionURL>
-						<makis>http://admin.ezp5_instance.legacy.makis/en/user/login</makis>
+						<makis>http://admin.ezp.ano.makis/en/user/login</makis>
 					</AdditionalLoginFormActionURL>
 				</SiteSettings>
 				<DebugSettings>
@@ -287,10 +286,28 @@
 			<file name="site.ini">
 				<SiteSettings>
 					<SiteURL>
-						<makis>admin.ezp5_instance.legacy.makis</makis>
+						<makis>admin.ezp.ano.makis</makis>
 					</SiteURL>
 				</SiteSettings>
-				<DebugSettings>
+		        <RegionalSettings>
+		        	<Locale>
+		            	<global>fre-FR</global>
+		            </Locale>
+		            <ContentObjectLocale>
+		            	<global>fre-FR</global>
+		            </ContentObjectLocale>
+		            <SiteLanguageList>
+            			<global>
+			      			<item></item>
+			              	<item>fre-FR</item>
+			              	<item>eng-GB</item>
+			         	</global>
+		            </SiteLanguageList>
+		            <TextTranslation>
+		            	<global>enabled</global>
+		            </TextTranslation>
+		        </RegionalSettings>
+		        <DebugSettings>
 				    <DebugOutput>
                         <global>disabled</global>
                         <local>enabled</local>
@@ -304,3 +321,647 @@
 		</siteaccess>
 	</INIFiles>
 </EnvSettings>
+<!-- 
+
+<?xml version="1.0" encoding="UTF-8"?>
+<EnvSettings>
+<Environments>
+<env id="global" abstract="abstract">
+<env id="local" abstract="abstract">
+<env id="ben" />
+<env id="mathieu" />
+</env>
+<env id="dev" />
+<env id="prod">
+<env id="preprod" />
+<env id="ben_preprod" />
+<env id="mathieu_preprod" />
+</env>
+</env>
+</Environments>
+<INIFiles>
+<override>
+<file name="site.ini">
+<ExtensionSettings>
+<ActiveExtensions type="array">
+<global>
+<item>lyonfrance</item>
+<item>helioswitchuser</item>
+<item>heliostarterkit</item>
+                            <item>helioextvideo</item>
+<item>xrowmetadata</item>
+                            <item>heliogmaps</item>
+<item>ezfind</item>
+<item>ezflow</item>
+<item>eztags</item>
+<item>sqliimport</item>
+<item>ezxmlinstaller</item>
+<item>ezmultiupload</item>
+<item>ezie</item>
+<item>ezless</item>
+<item>ezjscore</item>
+<item>ezoe</item>
+</global>
+</ActiveExtensions>
+</ExtensionSettings>
+<DatabaseSettings>
+<DatabaseImplementation>
+<global>ezmysqli</global>
+</DatabaseImplementation>
+<Server>
+<global>localhost</global>
+</Server>
+<Port>
+<global></global>
+</Port>
+<User>
+<ben>lyonfrance</ben>
+<mathieu>ez2</mathieu>
+<ben_preprod>lyonfrance</ben_preprod>
+<mathieu_preprod>ez2</mathieu_preprod>
+<dev>lyonfrance</dev>
+</User>
+<Password>
+<ben>lyonfrance</ben>
+<mathieu>ez2</mathieu>
+<ben_preprod>lyonfrance</ben_preprod>
+<mathieu_preprod>ez2</mathieu_preprod>
+<dev>5Wr251</dev>
+</Password>
+<Database>
+<ben>lyonfrance</ben>
+<mathieu>ez2</mathieu>
+<ben_preprod>lyonfrance</ben_preprod>
+<mathieu_preprod>ez2</mathieu_preprod>
+                        <dev>lyonfrance</dev>
+</Database>
+<Charset>
+<global></global>
+</Charset>
+<Socket>
+<global>disabled</global>
+</Socket>
+</DatabaseSettings>
+<MailSettings>
+<AdminEmail>
+<global>dev@heliopsis.net</global>
+<ben>bchoquet@heliopsis.net</ben>
+<mathieu>mathieu.maury@heliopsis.net</mathieu>
+<ben_preprod>bchoquet@heliopsis.net</ben_preprod>
+<mathieu_preprod>mathieu.maury@heliopsis.net</mathieu_preprod>
+</AdminEmail>
+<EmailSender>
+<global>dev@heliopsis.net</global>
+<ben>bchoquet@heliopsis.net</ben>
+<mathieu>mathieu.maury@heliopsis.net</mathieu>
+<ben_preprod>bchoquet@heliopsis.net</ben_preprod>
+<mathieu_preprod>mathieu.maury@heliopsis.net</mathieu_preprod>
+</EmailSender>
+</MailSettings>
+<SiteSettings>
+<DefaultAccess>
+<global>fr</global>
+</DefaultAccess>
+</SiteSettings>
+<SiteAccessSettings>
+<CheckValidity>
+<global>false</global>
+</CheckValidity>
+<HostMatchType>
+<global>uri</global>
+</HostMatchType>
+<ForceVirtualHost>
+<global>true</global>
+</ForceVirtualHost>
+<AvailableSiteAccessList type="array">
+<global>
+<item>fr</item>
+                            <item>en</item>
+                            <item>es</item>
+                            <item>de</item>
+                            <item>nl</item>
+                            <item>it</item>
+<item>fr_admin</item>
+</global>
+</AvailableSiteAccessList>
+<RelatedSiteAccessList type="array">
+<global>
+<item>fr</item>
+                            <item>en</item>
+                            <item>es</item>
+                            <item>de</item>
+                            <item>nl</item>
+                            <item>it</item>
+<item>fr_admin</item>
+</global>
+</RelatedSiteAccessList>
+</SiteAccessSettings>
+<FileSettings>
+<VarDir>
+<global>var/ez_site</global>
+</VarDir>
+</FileSettings>
+<TemplateSettings>
+
+</TemplateSettings>
+</file>
+<file name="image.ini">
+<ImageMagick>
+<IsEnabled>
+<global>true</global>
+</IsEnabled>
+<ExecutablePath>
+<global>/usr/bin</global>
+</ExecutablePath>
+<Executable>
+<global>convert</global>
+</Executable>
+</ImageMagick>
+</file>
+<file name="heliodeploy.ini">
+<ServerSettings>
+<PHPExecPath>
+<global>php</global>
+</PHPExecPath>
+</ServerSettings>
+</file>
+<file name="solr.ini">
+                <SolrBase>
+                    <SearchServerURI>
+                        <global>http://localhost:8983/solr</global>
+                        <dev>http://127.0.0.1:8983/solr/lyonfrance</dev>
+                        <ben>http://localhost:8983/solr/lyonfrance</ben>
+                        <mathieu>http://localhost:8983/solr/lyonfrance</mathieu>
+                        <mathieu_preprod>http://localhost:8983/solr/lyonfrance</mathieu_preprod>
+                        <ben_preprod>http://localhost:8983/solr/lyonfrance</ben_preprod>
+                    </SearchServerURI>
+                </SolrBase>
+</file>
+</override>
+<siteaccess name="fr">
+<file name="site.ini">
+<SiteSettings>
+<SiteURL>
+<ben>lyonfrance.localhost</ben>
+<mathieu>ez.local</mathieu>
+<ben_preprod>lyonfrance.localhost</ben_preprod>
+<mathieu_preprod>ez.local</mathieu_preprod>
+<dev>lyonfrance.heliopsis.net</dev>
+</SiteURL>
+<AdditionalLoginFormActionURL>
+<ben>http://lyonfrance.localhost/fr_admin/user/login</ben>
+<mathieu>http://ez.local/fr_admin/user/login</mathieu>
+<ben_preprod>lyonfrance.localhost/fr_admin/user/login</ben_preprod>
+<mathieu_preprod>ez.local/fr_admin/user/login</mathieu_preprod>
+<dev>http://lyonfrance.heliopsis.net/fr_admin/user/login</dev>
+</AdditionalLoginFormActionURL>
+</SiteSettings>
+<DebugSettings>
+<DebugOutput>
+<global>disabled</global>
+<local>enabled</local>
+</DebugOutput>
+<DebugRedirection>
+<global>disabled</global>
+</DebugRedirection>
+</DebugSettings>
+<TemplateSettings>
+<ShowUsedTemplates>
+<global>disabled</global>
+<local>enabled</local>
+</ShowUsedTemplates>
+<TemplateCompile>
+<global>enabled</global>
+<local>disabled</local>
+</TemplateCompile>
+<ViewCaching>
+<global>enabled</global>
+<local>disabled</local>
+</ViewCaching>
+<Cache>
+<global>enabled</global>
+<local>disabled</local>
+</Cache>
+<DevelopmentMode>
+<global>disabled</global>
+<local>enabled</local>
+</DevelopmentMode>
+<Debug>
+<global>disabled</global>
+<local>enabled</local>
+</Debug>
+<ShowXHTMLCode>
+<global>disabled</global>
+</ShowXHTMLCode>
+<TemplateCache>
+<global>enabled</global>
+<local>disabled</local>
+</TemplateCache>
+</TemplateSettings>
+<ContentSettings>
+<ViewCaching>
+<global>enabled</global>
+<local>disabled</local>
+</ViewCaching>
+</ContentSettings>
+<DatabaseSettings>
+<SQLOutput>
+<global>disabled</global>
+</SQLOutput>
+</DatabaseSettings>
+</file>
+</siteaccess>
+        <siteaccess name="en">
+            <file name="site.ini">
+                <SiteSettings>
+                    <SiteURL>
+                        <ben>lyonfrance.localhost/en</ben>
+                        <mathieu>ez.local/en</mathieu>
+                        <ben_preprod>lyonfrance.localhost/en</ben_preprod>
+                        <mathieu_preprod>ez.local/en</mathieu_preprod>
+                        <dev>lyonfrance.heliopsis.net/en</dev>
+                    </SiteURL>
+                    <AdditionalLoginFormActionURL>
+                        <ben>http://lyonfrance.localhost/fr_admin/user/login</ben>
+                        <mathieu>http://ez.local/fr_admin/user/login</mathieu>
+                        <ben_preprod>lyonfrance.localhost/fr_admin/user/login</ben_preprod>
+                        <mathieu_preprod>ez.local/fr_admin/user/login</mathieu_preprod>
+                        <dev>http://lyonfrance.heliopsis.net/fr_admin/user/login</dev>
+                    </AdditionalLoginFormActionURL>
+                </SiteSettings>
+                <DebugSettings>
+                    <DebugOutput>
+                        <global>disabled</global>
+                        <local>enabled</local>
+                    </DebugOutput>
+                    <DebugRedirection>
+                        <global>disabled</global>
+                    </DebugRedirection>
+                </DebugSettings>
+                <TemplateSettings>
+                    <ShowUsedTemplates>
+                        <global>disabled</global>
+                        <local>enabled</local>
+                    </ShowUsedTemplates>
+                    <TemplateCompile>
+                        <global>enabled</global>
+                        <local>disabled</local>
+                    </TemplateCompile>
+                    <ViewCaching>
+                        <global>enabled</global>
+                        <local>disabled</local>
+                    </ViewCaching>
+                    <Cache>
+                        <global>enabled</global>
+                        <local>disabled</local>
+                    </Cache>
+                    <DevelopmentMode>
+                        <global>disabled</global>
+                        <local>enabled</local>
+                    </DevelopmentMode>
+                    <Debug>
+                        <global>disabled</global>
+                        <local>enabled</local>
+                    </Debug>
+                    <ShowXHTMLCode>
+                        <global>disabled</global>
+                    </ShowXHTMLCode>
+                    <TemplateCache>
+                        <global>enabled</global>
+                        <local>disabled</local>
+                    </TemplateCache>
+                </TemplateSettings>
+                <ContentSettings>
+                    <ViewCaching>
+                        <global>enabled</global>
+                        <local>disabled</local>
+                    </ViewCaching>
+                </ContentSettings>
+                <DatabaseSettings>
+                    <SQLOutput>
+                        <global>disabled</global>
+                    </SQLOutput>
+                </DatabaseSettings>
+            </file>
+        </siteaccess>
+        <siteaccess name="es">
+            <file name="site.ini">
+                <SiteSettings>
+                    <SiteURL>
+                        <ben>lyonfrance.localhost/es</ben>
+                        <mathieu>ez.local/es</mathieu>
+                        <ben_preprod>lyonfrance.localhost/es</ben_preprod>
+                        <mathieu_preprod>ez.local/es</mathieu_preprod>
+                        <dev>lyonfrance.heliopsis.net/es</dev>
+                    </SiteURL>
+                    <AdditionalLoginFormActionURL>
+                        <ben>http://lyonfrance.localhost/fr_admin/user/login</ben>
+                        <mathieu>http://ez.local/fr_admin/user/login</mathieu>
+                        <ben_preprod>lyonfrance.localhost/fr_admin/user/login</ben_preprod>
+                        <mathieu_preprod>ez.local/fr_admin/user/login</mathieu_preprod>
+                        <dev>http://lyonfrance.heliopsis.net/fr_admin/user/login</dev>
+                    </AdditionalLoginFormActionURL>
+                </SiteSettings>
+                <DebugSettings>
+                    <DebugOutput>
+                        <global>disabled</global>
+                        <local>enabled</local>
+                    </DebugOutput>
+                    <DebugRedirection>
+                        <global>disabled</global>
+                    </DebugRedirection>
+                </DebugSettings>
+                <TemplateSettings>
+                    <ShowUsedTemplates>
+                        <global>disabled</global>
+                        <local>enabled</local>
+                    </ShowUsedTemplates>
+                    <TemplateCompile>
+                        <global>enabled</global>
+                        <local>disabled</local>
+                    </TemplateCompile>
+                    <ViewCaching>
+                        <global>enabled</global>
+                        <local>disabled</local>
+                    </ViewCaching>
+                    <Cache>
+                        <global>enabled</global>
+                        <local>disabled</local>
+                    </Cache>
+                    <DevelopmentMode>
+                        <global>disabled</global>
+                        <local>enabled</local>
+                    </DevelopmentMode>
+                    <Debug>
+                        <global>disabled</global>
+                        <local>enabled</local>
+                    </Debug>
+                    <ShowXHTMLCode>
+                        <global>disabled</global>
+                    </ShowXHTMLCode>
+                    <TemplateCache>
+                        <global>enabled</global>
+                        <local>disabled</local>
+                    </TemplateCache>
+                </TemplateSettings>
+                <ContentSettings>
+                    <ViewCaching>
+                        <global>enabled</global>
+                        <local>disabled</local>
+                    </ViewCaching>
+                </ContentSettings>
+                <DatabaseSettings>
+                    <SQLOutput>
+                        <global>disabled</global>
+                    </SQLOutput>
+                </DatabaseSettings>
+            </file>
+        </siteaccess>
+        <siteaccess name="de">
+            <file name="site.ini">
+                <SiteSettings>
+                    <SiteURL>
+                        <ben>lyonfrance.localhost/de</ben>
+                        <mathieu>ez.local/de</mathieu>
+                        <ben_preprod>lyonfrance.localhost/de</ben_preprod>
+                        <mathieu_preprod>ez.local/de</mathieu_preprod>
+                        <dev>lyonfrance.heliopsis.net/de</dev>
+                    </SiteURL>
+                    <AdditionalLoginFormActionURL>
+                        <ben>http://lyonfrance.localhost/fr_admin/user/login</ben>
+                        <mathieu>http://ez.local/fr_admin/user/login</mathieu>
+                        <ben_preprod>lyonfrance.localhost/fr_admin/user/login</ben_preprod>
+                        <mathieu_preprod>ez.local/fr_admin/user/login</mathieu_preprod>
+                        <dev>http://lyonfrance.heliopsis.net/fr_admin/user/login</dev>
+                    </AdditionalLoginFormActionURL>
+                </SiteSettings>
+                <DebugSettings>
+                    <DebugOutput>
+                        <global>disabled</global>
+                        <local>enabled</local>
+                    </DebugOutput>
+                    <DebugRedirection>
+                        <global>disabled</global>
+                    </DebugRedirection>
+                </DebugSettings>
+                <TemplateSettings>
+                    <ShowUsedTemplates>
+                        <global>disabled</global>
+                        <local>enabled</local>
+                    </ShowUsedTemplates>
+                    <TemplateCompile>
+                        <global>enabled</global>
+                        <local>disabled</local>
+                    </TemplateCompile>
+                    <ViewCaching>
+                        <global>enabled</global>
+                        <local>disabled</local>
+                    </ViewCaching>
+                    <Cache>
+                        <global>enabled</global>
+                        <local>disabled</local>
+                    </Cache>
+                    <DevelopmentMode>
+                        <global>disabled</global>
+                        <local>enabled</local>
+                    </DevelopmentMode>
+                    <Debug>
+                        <global>disabled</global>
+                        <local>enabled</local>
+                    </Debug>
+                    <ShowXHTMLCode>
+                        <global>disabled</global>
+                    </ShowXHTMLCode>
+                    <TemplateCache>
+                        <global>enabled</global>
+                        <local>disabled</local>
+                    </TemplateCache>
+                </TemplateSettings>
+                <ContentSettings>
+                    <ViewCaching>
+                        <global>enabled</global>
+                        <local>disabled</local>
+                    </ViewCaching>
+                </ContentSettings>
+                <DatabaseSettings>
+                    <SQLOutput>
+                        <global>disabled</global>
+                    </SQLOutput>
+                </DatabaseSettings>
+            </file>
+        </siteaccess>
+        <siteaccess name="nl">
+            <file name="site.ini">
+                <SiteSettings>
+                    <SiteURL>
+                        <ben>lyonfrance.localhost/nl</ben>
+                        <mathieu>ez.local/nl</mathieu>
+                        <ben_preprod>lyonfrance.localhost/nl</ben_preprod>
+                        <mathieu_preprod>ez.local/nl</mathieu_preprod>
+                        <dev>lyonfrance.heliopsis.net/nl</dev>
+                    </SiteURL>
+                    <AdditionalLoginFormActionURL>
+                        <ben>http://lyonfrance.localhost/fr_admin/user/login</ben>
+                        <mathieu>http://ez.local/fr_admin/user/login</mathieu>
+                        <ben_preprod>lyonfrance.localhost/fr_admin/user/login</ben_preprod>
+                        <mathieu_preprod>ez.local/fr_admin/user/login</mathieu_preprod>
+                        <dev>http://lyonfrance.heliopsis.net/fr_admin/user/login</dev>
+                    </AdditionalLoginFormActionURL>
+                </SiteSettings>
+                <DebugSettings>
+                    <DebugOutput>
+                        <global>disabled</global>
+                        <local>enabled</local>
+                    </DebugOutput>
+                    <DebugRedirection>
+                        <global>disabled</global>
+                    </DebugRedirection>
+                </DebugSettings>
+                <TemplateSettings>
+                    <ShowUsedTemplates>
+                        <global>disabled</global>
+                        <local>enabled</local>
+                    </ShowUsedTemplates>
+                    <TemplateCompile>
+                        <global>enabled</global>
+                        <local>disabled</local>
+                    </TemplateCompile>
+                    <ViewCaching>
+                        <global>enabled</global>
+                        <local>disabled</local>
+                    </ViewCaching>
+                    <Cache>
+                        <global>enabled</global>
+                        <local>disabled</local>
+                    </Cache>
+                    <DevelopmentMode>
+                        <global>disabled</global>
+                        <local>enabled</local>
+                    </DevelopmentMode>
+                    <Debug>
+                        <global>disabled</global>
+                        <local>enabled</local>
+                    </Debug>
+                    <ShowXHTMLCode>
+                        <global>disabled</global>
+                    </ShowXHTMLCode>
+                    <TemplateCache>
+                        <global>enabled</global>
+                        <local>disabled</local>
+                    </TemplateCache>
+                </TemplateSettings>
+                <ContentSettings>
+                    <ViewCaching>
+                        <global>enabled</global>
+                        <local>disabled</local>
+                    </ViewCaching>
+                </ContentSettings>
+                <DatabaseSettings>
+                    <SQLOutput>
+                        <global>disabled</global>
+                    </SQLOutput>
+                </DatabaseSettings>
+            </file>
+        </siteaccess>
+        <siteaccess name="it">
+            <file name="site.ini">
+                <SiteSettings>
+                    <SiteURL>
+                        <ben>lyonfrance.localhost/it</ben>
+                        <mathieu>ez.local/it</mathieu>
+                        <ben_preprod>lyonfrance.localhost/it</ben_preprod>
+                        <mathieu_preprod>ez.local/it</mathieu_preprod>
+                        <dev>lyonfrance.heliopsis.net/it</dev>
+                    </SiteURL>
+                    <AdditionalLoginFormActionURL>
+                        <ben>http://lyonfrance.localhost/fr_admin/user/login</ben>
+                        <mathieu>http://ez.local/fr_admin/user/login</mathieu>
+                        <ben_preprod>lyonfrance.localhost/fr_admin/user/login</ben_preprod>
+                        <mathieu_preprod>ez.local/fr_admin/user/login</mathieu_preprod>
+                        <dev>http://lyonfrance.heliopsis.net/fr_admin/user/login</dev>
+                    </AdditionalLoginFormActionURL>
+                </SiteSettings>
+                <DebugSettings>
+                    <DebugOutput>
+                        <global>disabled</global>
+                        <local>enabled</local>
+                    </DebugOutput>
+                    <DebugRedirection>
+                        <global>disabled</global>
+                    </DebugRedirection>
+                </DebugSettings>
+                <TemplateSettings>
+                    <ShowUsedTemplates>
+                        <global>disabled</global>
+                        <local>enabled</local>
+                    </ShowUsedTemplates>
+                    <TemplateCompile>
+                        <global>enabled</global>
+                        <local>disabled</local>
+                    </TemplateCompile>
+                    <ViewCaching>
+                        <global>enabled</global>
+                        <local>disabled</local>
+                    </ViewCaching>
+                    <Cache>
+                        <global>enabled</global>
+                        <local>disabled</local>
+                    </Cache>
+                    <DevelopmentMode>
+                        <global>disabled</global>
+                        <local>enabled</local>
+                    </DevelopmentMode>
+                    <Debug>
+                        <global>disabled</global>
+                        <local>enabled</local>
+                    </Debug>
+                    <ShowXHTMLCode>
+                        <global>disabled</global>
+                    </ShowXHTMLCode>
+                    <TemplateCache>
+                        <global>enabled</global>
+                        <local>disabled</local>
+                    </TemplateCache>
+                </TemplateSettings>
+                <ContentSettings>
+                    <ViewCaching>
+                        <global>enabled</global>
+                        <local>disabled</local>
+                    </ViewCaching>
+                </ContentSettings>
+                <DatabaseSettings>
+                    <SQLOutput>
+                        <global>disabled</global>
+                    </SQLOutput>
+                </DatabaseSettings>
+            </file>
+        </siteaccess>
+<siteaccess name="fr_admin">
+<file name="site.ini">
+<SiteSettings>
+<SiteURL>
+<ben>lyonfrance.localhost/fr_admin</ben>
+<mathieu>ez.local/fr_admin</mathieu>
+<ben_preprod>lyonfrance.localhost/fr_admin</ben_preprod>
+<mathieu_preprod>ez.local/fr_admin</mathieu_preprod>
+<dev>lyonfrance.heliopsis.net/fr_admin</dev>
+</SiteURL>
+</SiteSettings>
+<DebugSettings>
+<DebugOutput>
+                        <global>disabled</global>
+                        <local>enabled</local>
+                    </DebugOutput>
+<DebugRedirection>
+<global>disabled</global>
+<ben>disabled</ben>
+</DebugRedirection>
+</DebugSettings>
+</file>
+</siteaccess>
+</INIFiles>
+</EnvSettings>
+
+
+
+ -->

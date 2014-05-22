@@ -1,5 +1,5 @@
 <?php /*
 [RegionalSettings]
-TranslationExtensions[]=__projet__
+TranslationExtensions[]=anocongo
 
 */ ?>

@@ -1,7 +1,7 @@
 <?php /*
 
 [ExtensionSettings]
-DesignExtensions[]=__projet__
+DesignExtensions[]=anocongo
 
 [StylesheetSettings]
 FrontendCSSFileList[]=carousel.css
@@ -14,9 +14,6 @@ JavaScriptFooterList[]
 
 FrontendJavaScriptList[]=jquery-ui-1.10.4.custom.min.js
 FrontendJavaScriptList[]=ano.script.js
-
-
-BackendJavaScriptList[]=jquery.browser.js
 
 
 */ ?>

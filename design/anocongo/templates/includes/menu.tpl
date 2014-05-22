@@ -13,7 +13,7 @@
     - limit                 int     Nombre d'éléments à remonter. Par défaut false() -> sans limite. (Ne fonctionne que pour le premier niveau, à voir pour les autres...)
 *}
 {def
-    $parent_node_id = first_set($parent_node_id, base_root_node_id())
+    $parent_node_id = first_set($parent_node_id, basek_root_node_id())
     $class_filter_type = first_set($class_filter_type, 'exclude')
     $class_filter_array = first_set($class_filter_array, array())
     $depth = first_set($depth, 1)

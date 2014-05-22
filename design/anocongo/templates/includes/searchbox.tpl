@@ -4,7 +4,7 @@
     searchText = ''
 }
 <form class="searchbox" method="get" action={'content/search'|ezurl}>
-    <label for="{$id}">{'Search:'|i18n('__base__/searchbox')}</label>
+    <label for="{$id}">{'Search:'|i18n('basek/searchbox')}</label>
     <input
     	type="search"
     	name="SearchText"
@@ -22,6 +22,6 @@
     	{/if}
     	value="{$searchText|wash}"
     	 />
-    <input type="submit" value="{'OK'|i18n('__base__/searchbox')}" />
+    <input type="submit" value="{'OK'|i18n('basek/searchbox')}" />
 </form>
 {/default}

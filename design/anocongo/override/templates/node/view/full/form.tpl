@@ -1,7 +1,7 @@
 {def
     $object = $node.object
     $field_error = ""
-    $error_display = ezini( 'FormSettings', 'ErrorDisplay', '__base__.ini' )
+    $error_display = ezini( 'FormSettings', 'ErrorDisplay', 'basek.ini' )
     
     $alias = cond( 'gallery_slideshow', 'gallery' )
     $hash = concat( $node.object.id, $node.object.current_version, $alias, rand( 0, 256 ) )|md5
@@ -47,7 +47,7 @@
         <div class="form-buttons">
             <input type="hidden" name="ContentObjectID" value="{$object.id}" />
             <input type="hidden" name="ContentNodeID" value="{$object.main_node_id}" />
-            <input type="submit" name="ActionCollectInformation" value="{'Send'|i18n('__base__/forms')}" />
+            <input type="submit" name="ActionCollectInformation" value="{'Send'|i18n('basek/forms')}" />
         </div>
     </form>
     

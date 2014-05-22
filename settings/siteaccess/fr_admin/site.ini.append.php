@@ -18,9 +18,10 @@ AdditionalSiteDesignList[]=admin
 [RegionalSettings]
 Locale=fre-FR
 ContentObjectLocale=fre-FR
-ShowUntranslatedObjects=disabled
+ShowUntranslatedObjects=enabled
 SiteLanguageList[]
 SiteLanguageList[]=fre-FR
+SiteLanguageList[]=eng-GB
 TextTranslation=enabled
 
 [ContentSettings]

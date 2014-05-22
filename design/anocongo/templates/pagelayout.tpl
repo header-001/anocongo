@@ -3,14 +3,14 @@
 {def
     $user_hash         = concat( $current_user.role_id_list|implode( ',' ), ',', $current_user.limited_assignment_value_list|implode( ',' ) )
     $current_node_id   = cond($module_result.node_id, $module_result.node_id, 0)
-    $index_page        = base_root_node_id()
+    $index_page        = basek_root_node_id()
     $front_page        = fetch( 'content', 'node', hash( 'node_id', $index_page ) )
     $current_node      = fetch( 'content', 'node', hash( 'node_id', $current_node_id ) )
-    $page_css_class    = first_set( base_call_php_func('pageCSSClass', array( $current_node ) ), '')
+    $page_css_class    = first_set( basek_call_php_func('pageCSSClass', array( $current_node ) ), '')
 
 
-    $expiry            = ezini( 'CacheBlockSettings', 'Expiry', '__base__.ini' )
-    $subtree_expiry    = ezini( 'CacheBlockSettings', 'SubtreeExpiry', '__base__.ini' )
+    $expiry            = ezini( 'CacheBlockSettings', 'Expiry', 'basekit.ini' )
+    $subtree_expiry    = ezini( 'CacheBlockSettings', 'SubtreeExpiry', 'basekit.ini' )
 
     $cache_blocks      = array( 'PageHead', 'Header', 'Footer', 'PageFoot' )
     $cache_block_keys  = hash()
@@ -30,7 +30,7 @@
 {* On charge les clés des différents cache-blocks *}
 {foreach $cache_blocks as $name}
     {set
-        $cache_settings = ezini( 'CacheBlockSettings', concat( $name, 'Keys' ), '__base__.ini' )
+        $cache_settings = ezini( 'CacheBlockSettings', concat( $name, 'Keys' ), 'basekit.ini' )
         $tmp_keys = array()
     }
     {foreach $cache_settings as $alias}

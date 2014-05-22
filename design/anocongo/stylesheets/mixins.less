@@ -1,0 +1,61 @@
+/** Overrider ce fichier pour y inclure vos mixins */
+
+/* Taille de base du texte */
+@body-size: 14px/1.1;
+
+/* Police par défaut */
+@font-family: sans-serif;
+
+/* Référence des marges */
+@margin: 1em;
+
+/* Couleur par défaut du texte */
+@front: #444;
+/* Couleur des liens */
+@link: #607890;
+@hover: #036;
+
+/* Sélection et highlight mobile */
+@highlight: #FF5E99;
+@highlight-text: #fff;
+.highlight{
+    background-color:@highlight; 
+    color:@highlight-text;
+}
+
+/* Eléments insérés */
+@ins: #ff9;
+@ins-text: #000;
+.ins{
+    background-color:@ins; 
+    color:@ins-text;
+}
+
+/* Traits séparateurs */
+@borders: #ccc;
+@rose : #da1581;
+@gris : #dddddd;
+@bleu: #317eac;
+@footer: #EEEEEE;
+@btn-search: #1B4660;
+
+
+/* Typos */
+.sans-serif(@weight: normal, @size: 1em, @lineheight: 1.42em) {
+    font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+    font-size: @size;
+    font-weight: @weight;
+    line-height: @lineheight;
+}
+.serif(@weight: normal, @size: 1em, @lineheight: 1.42em) {
+    font-family: "Georgia", Times New Roman, Times, sans-serif;
+    font-size: @size;
+    font-weight: @weight;
+    line-height: @lineheight;
+}
+.monospace(@weight: normal, @size: 0.9em, @lineheight: 1.42em) {
+    font-family: "Monaco", Courier New, monospace;
+    font-size: @size;
+    font-weight: @weight;
+    line-height: @lineheight;
+}

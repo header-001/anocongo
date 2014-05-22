@@ -12,14 +12,14 @@ $cli->output("Démarrage du script cron_import_excel.php \n");
 
 
 // lecture des paramètres 
-$prm = eZINI::instance( '__projet__.ini' );
+$prm = eZINI::instance( 'anocongo.ini' );
 $noeud_travail_id=$prm->variable('Importation','noeud_travail_id');
 $classe_objet_importe=$prm->variable('Importation','classe_objet_importe');
 $prefix_remote_id=$prm->variable('Importation','prefix_remote_id');
 
 $cli->output('noeud_travail_id='.$noeud_travail_id.' classes_a_traiter='.$classe_objet_importe);
 
-$fichier_in = eZExtension::baseDirectory() .'/__projet__/fichiers_in/24OO ORGANISATION DE LA SOCIETE CIVILE REPERTORIEES PAR MONUSCO.xlsx';
+$fichier_in = eZExtension::baseDirectory() .'/anocongo/fichiers_in/24OO ORGANISATION DE LA SOCIETE CIVILE REPERTORIEES PAR MONUSCO.xlsx';
 
 $node_recherche = eZContentObjectTreeNode::fetch($noeud_travail_id);
 

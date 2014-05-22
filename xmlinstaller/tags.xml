@@ -1,14 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <eZXMLImporter xmlns="http://ez.no/URI/xmlinstaller/0.1.5">
 	<CreateTags>
-		<Tag remoteID="cibles">
-			<keyword>Cibles</keyword>
-			<Tag remoteID="cibles_executants">
-				<keyword>Exécutants</keyword>
-			</Tag>
-			<Tag remoteID="cibles_exploitants">
-				<keyword>Exploitants</keyword>
-			</Tag>
+		<Tag remoteID="Provinces">
+			<keyword>Provinces</keyword>
 		</Tag>
 	</CreateTags>
 </eZXMLImporter>

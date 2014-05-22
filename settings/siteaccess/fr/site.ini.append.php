@@ -1,19 +1,17 @@
 <?php /* #?ini charset="utf-8"?
 
 [SiteSettings]
-SiteName=__projet__
+SiteName=Ano Congo
 LoginPage=embedded
-SiteURL=ezp5_instance.legacy.makis
-AdditionalLoginFormActionURL=http://ezp5_instance.legacy.makis/fr_admin/user/login
 
 [SiteAccessSettings]
 RequireUserLogin=false
 ShowHiddenNodes=false
 
 [DesignSettings]
-SiteDesign=__projet__
+SiteDesign=anocongo
 AdditionalSiteDesignList[]
-AdditionalSiteDesignList[]=__base__
+AdditionalSiteDesignList[]=basekit
 AdditionalSiteDesignList[]=common
 AdditionalSiteDesignList[]=base
 AdditionalSiteDesignList[]=standard
