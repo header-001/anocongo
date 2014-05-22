@@ -1,2 +1,4 @@
 lib
 fichiers_in
+/*.project
+*.buildpath
