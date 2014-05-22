@@ -113,11 +113,11 @@
                             <item>admin.ezp.ano.makis;fr_admin</item>
                         </makis>
                         <prod>
-                            <item>anocongo.com;fr</item>
-                            <item>anocongo.com;en</item>
-                            <item>www.anocongo.com;fr</item>
-                            <item>www.anocongo.com;en</item>
-                            <item>admin.anocongo.com;fr_admin</item>
+                            <item>anocongo.org;fr</item>
+                            <item>anocongo.org;en</item>
+                            <item>www.anocongo.org;fr</item>
+                            <item>www.anocongo.org;en</item>
+                            <item>admin.anocongo.org;fr_admin</item>
                         </prod>
                     </HostMatchMapItems>
 				</SiteAccessSettings>
@@ -161,7 +161,7 @@
             <file name="solr.ini">
                 <SolrBase>
                     <SearchServerURI>
-                        <global>http://127.0.0.1:8983/solr/ano</global>
+                        <global>http://127.0.0.1:8983/solr/anocongo</global>
                     </SearchServerURI>
                 </SolrBase>
             </file>
@@ -171,11 +171,11 @@
 				<SiteSettings>
 					<SiteURL>
 						<makis>ezp.ano.makis</makis>
-						<prod>www.anocongo.com</prod>
+						<prod>www.anocongo.org</prod>
 					</SiteURL>
 					<AdditionalLoginFormActionURL>
 						<makis>http://ezp.ano.makis/user/login</makis>
-						<prod>http://www.anocongo.com/user/login</prod>
+						<prod>http://www.anocongo.org/user/login</prod>
 					</AdditionalLoginFormActionURL>
 				</SiteSettings>
 				<DebugSettings>
@@ -238,11 +238,11 @@
 				<SiteSettings>
 					<SiteURL>
 						<makis>ezp.ano.makis/en</makis>
-						<prod>www.anocongo.com</prod>
+						<prod>www.anocongo.org</prod>
 					</SiteURL>
 					<AdditionalLoginFormActionURL>
 						<makis>http://admin.ezp.ano.makis/en/user/login</makis>
-						<prod>http://admin.anocongo.com/en/user/login</prod>
+						<prod>http://admin.anocongo.org/en/user/login</prod>
 					</AdditionalLoginFormActionURL>
 				</SiteSettings>
 				<DebugSettings>
@@ -305,7 +305,7 @@
 				<SiteSettings>
 					<SiteURL>
 						<makis>admin.ezp.ano.makis</makis>
-						<prod>admin.anocongo.com</prod>
+						<prod>admin.anocongo.org</prod>
 					</SiteURL>
 				</SiteSettings>
 		        <RegionalSettings>
