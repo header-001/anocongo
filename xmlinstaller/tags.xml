@@ -4,5 +4,8 @@
 		<Tag remoteID="Provinces">
 			<keyword>Provinces</keyword>
 		</Tag>
+		<Tag remoteID="Secteurs_Activites">
+			<keyword>Secteurs d'activités</keyword>
+		</Tag>
 	</CreateTags>
 </eZXMLImporter>

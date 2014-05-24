@@ -96,6 +96,7 @@
             <Attributes>
                 <title>Ong</title>
                 <in_menu>0</in_menu>
+                <show_children>1</show_children>
             </Attributes>
         </ContentObject>
 	</CreateContent>
