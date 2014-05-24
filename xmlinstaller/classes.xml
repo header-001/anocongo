@@ -584,18 +584,18 @@
 						<DatatypeParameters/>
 					</Names>
 				</Attribute>
-				<Attribute identifier="Twitter" translatable="true" informationCollector="false" searchable="false" required="true" datatype="ezurl">
+				<Attribute identifier="twitter" translatable="true" informationCollector="false" searchable="false" required="true" datatype="ezurl">
 					<Names fre-FR="twitter">
 						<DatatypeParameters/>
 					</Names>
 				</Attribute>
-				<Attribute identifier="Linkedin" translatable="true" informationCollector="false" searchable="false" required="true" datatype="ezurl">
-					<Names fre-FR="twitter">
+				<Attribute identifier="linkedin" translatable="true" informationCollector="false" searchable="false" required="true" datatype="ezurl">
+					<Names fre-FR="Linkedin">
 						<DatatypeParameters/>
 					</Names>
 				</Attribute>
-				<Attribute identifier="Skype" translatable="true" informationCollector="false" searchable="false" required="true" datatype="ezstring">
-					<Names fre-FR="skype">
+				<Attribute identifier="skype" translatable="true" informationCollector="false" searchable="false" required="true" datatype="ezstring">
+					<Names fre-FR="Skype">
 						<DatatypeParameters/>
 					</Names>
 				</Attribute>
@@ -610,14 +610,16 @@
 						</DatatypeParameters>
 					</Names>
 				</Attribute>
-				<!-- Object relation -->
-				<Attribute identifier="adhesion_reseaux" translatable="true" informationCollector="false" searchable="false" required="true" datatype="ezstring">
-					<Names fre-FR="Adhésion à un / des réseaux">
-						<DatatypeParameters>
-							<max-length>0</max-length>
-							<default-string/>
-						</DatatypeParameters>
-					</Names>
+				<Attribute identifier="adhesion_reseaux" datatype="ezobjectrelationlist" required="false" searchable="false" informationCollector="false" translatable="true">
+					<Names fre-FR="Adhésion à un / des réseaux"/>
+					<DatatypeParameters>
+						<default-placement node-id="[internal:ONGS]"/>
+						<type>2</type>
+						<class-constraints>
+							<class-constraint class-identifier="contact"/>
+						</class-constraints>
+						<selection-type>0</selection-type>
+					</DatatypeParameters>
 				</Attribute>
 				<Attribute identifier="presentation" translatable="true" informationCollector="false" searchable="false" required="true" datatype="eztext">
 					<Names fre-FR="Présentation">
@@ -728,22 +730,22 @@
 					</Names>
 				</Attribute>
 				
-				<Attribute identifier="principales_activites" translatable="true" informationCollector="false" searchable="false" required="true" datatype="eztext">
+				<Attribute identifier="principales_activites" translatable="true" informationCollector="false" searchable="false" required="true" datatype="ezxmltext">
 					<Names fre-FR="Principales activités">
 						<DatatypeParameters/>
 					</Names>
 				</Attribute>
-				<Attribute identifier="points_forts_organisation" translatable="true" informationCollector="false" searchable="false" required="true" datatype="eztext">
+				<Attribute identifier="points_forts_organisation" translatable="true" informationCollector="false" searchable="false" required="true" datatype="ezxmltext">
 					<Names fre-FR="Points forts de l'organisation">
 						<DatatypeParameters/>
 					</Names>
 				</Attribute>
-				<Attribute identifier="points_faibles_organisation" translatable="true" informationCollector="false" searchable="false" required="true" datatype="eztext">
+				<Attribute identifier="points_faibles_organisation" translatable="true" informationCollector="false" searchable="false" required="true" datatype="ezxmltext">
 					<Names fre-FR="Points faibles de l'organisation">
 						<DatatypeParameters/>
 					</Names>
 				</Attribute>
-				<Attribute identifier="besoins" translatable="true" informationCollector="false" searchable="false" required="true" datatype="eztext">
+				<Attribute identifier="besoins" translatable="true" informationCollector="false" searchable="false" required="true" datatype="ezxmltext">
 					<Names fre-FR="Besoins">
 						<DatatypeParameters/>
 					</Names>

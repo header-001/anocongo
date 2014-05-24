@@ -18,7 +18,7 @@ $remote_travail_id=$prm->variable('Importation','remote_travail_id');
 $classe_objet_importe=$prm->variable('Importation','classe_objet_importe');
 $prefix_remote_id=$prm->variable('Importation','prefix_remote_id');
 
-$fichier_in = eZExtension::baseDirectory() .'/anocongo/fichiers_in/24OO ORGANISATION DE LA SOCIETE CIVILE REPERTORIEES PAR MONUSCO.xlsx';
+$fichier_in = eZExtension::baseDirectory() .'/anocongo/fichiers_in/_24OO ORGANISATION DE LA SOCIETE CIVILE REPERTORIEES PAR MONUSCO.xlsx';
 
 $ong = eZContentObject::fetchByRemoteID($remote_travail_id);
 $noeud_travail_id = $ong->mainNodeID();
