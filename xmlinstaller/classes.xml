@@ -451,7 +451,7 @@
 				</Names>
 				</Attribute>
 				</Attributes>
-				</ContentClass>
+		</ContentClass>
 		<ContentClass classExistAction="new" urlAliasPattern="&lt;seo|nom&gt;" objectNamePattern="&lt;nom&gt;" identifier="ong" isContainer="false">
 			<Names fre-FR="Ong"/>
 			<Groups>
@@ -479,7 +479,7 @@
 						<DatatypeParameters/>
 					</Names>
 				</Attribute>
-				<Attribute identifier="logo" translatable="true" informationCollector="false" searchable="false" required="true" datatype="ezimage">
+				<Attribute identifier="logo" translatable="true" informationCollector="false" searchable="false" required="false" datatype="ezimage">
 					<Names  fre-FR="Logo">
 						<DatatypeParameters>
 							<max-size unit-size="mega">5</max-size>
@@ -494,7 +494,7 @@
 						</DatatypeParameters>
 					</Names>
 				</Attribute>
-				<Attribute identifier="code_postal" translatable="true" informationCollector="false" searchable="true" required="true" datatype="ezstring">
+				<Attribute identifier="code_postal" translatable="true" informationCollector="false" searchable="true" required="false" datatype="ezstring">
 					<Names fre-FR="Code postal">
 						<DatatypeParameters>
 							<max-length>0</max-length>
@@ -502,7 +502,7 @@
 						</DatatypeParameters>
 					</Names>
 				</Attribute>
-				<Attribute identifier="province" translatable="true" informationCollector="false" searchable="true" required="false" datatype="eztags">
+				<Attribute identifier="province" translatable="true" informationCollector="false" searchable="true" required="true" datatype="eztags">
 					<Names fre-FR="Province">
 						<DatatypeParameters>
 							<subtree-limit>1</subtree-limit>
@@ -512,7 +512,7 @@
 						</DatatypeParameters>
 					</Names>
 				</Attribute>
-				<Attribute identifier="district" translatable="true" informationCollector="false" searchable="true" required="false" datatype="eztags">
+				<Attribute identifier="district" translatable="true" informationCollector="false" searchable="true" required="true" datatype="eztags">
 					<Names fre-FR="District">
 						<DatatypeParameters>
 							<subtree-limit>1</subtree-limit>
@@ -522,7 +522,7 @@
 						</DatatypeParameters>
 					</Names>
 				</Attribute>
-				<Attribute identifier="commune" translatable="true" informationCollector="false" searchable="true" required="false" datatype="eztags">
+				<Attribute identifier="commune" translatable="true" informationCollector="false" searchable="true" required="true" datatype="eztags">
 					<Names fre-FR="Commune">
 						<DatatypeParameters>
 							<subtree-limit>1</subtree-limit>
@@ -533,7 +533,7 @@
 					</Names>
 				</Attribute>
 				
-				<Attribute identifier="telephone1" translatable="true" informationCollector="false" searchable="false" required="true" datatype="ezstring">
+				<Attribute identifier="telephone1" translatable="true" informationCollector="false" searchable="false" required="false" datatype="ezstring">
 					<Names fre-FR="Téléphone1">
 						<DatatypeParameters>
 							<max-length>0</max-length>
@@ -541,7 +541,7 @@
 						</DatatypeParameters>
 					</Names>
 				</Attribute>
-				<Attribute identifier="telephone2" translatable="true" informationCollector="false" searchable="false" required="true" datatype="ezstring">
+				<Attribute identifier="telephone2" translatable="true" informationCollector="false" searchable="false" required="false" datatype="ezstring">
 					<Names fre-FR="Téléphone2">
 						<DatatypeParameters>
 							<max-length>0</max-length>
@@ -549,7 +549,7 @@
 						</DatatypeParameters>
 					</Names>
 				</Attribute>
-				<Attribute identifier="telephone3" translatable="true" informationCollector="false" searchable="false" required="true" datatype="ezstring">
+				<Attribute identifier="telephone3" translatable="true" informationCollector="false" searchable="false" required="false" datatype="ezstring">
 					<Names fre-FR="Téléphone2">
 						<DatatypeParameters>
 							<max-length>0</max-length>
@@ -558,49 +558,49 @@
 					</Names>
 				</Attribute>
 				
-				<Attribute identifier="email1" translatable="true" informationCollector="false" searchable="false" required="true" datatype="ezemail">
+				<Attribute identifier="email1" translatable="true" informationCollector="false" searchable="false" required="false" datatype="ezemail">
 					<Names fre-FR="Email1">
 						<DatatypeParameters/>
 					</Names>
 				</Attribute>
-				<Attribute identifier="email2" translatable="true" informationCollector="false" searchable="false" required="true" datatype="ezemail">
+				<Attribute identifier="email2" translatable="true" informationCollector="false" searchable="false" required="false" datatype="ezemail">
 					<Names fre-FR="Email2">
 						<DatatypeParameters/>
 					</Names>
 				</Attribute>
-				<Attribute identifier="email3" translatable="true" informationCollector="false" searchable="false" required="true" datatype="ezemail">
+				<Attribute identifier="email3" translatable="true" informationCollector="false" searchable="false" required="false" datatype="ezemail">
 					<Names fre-FR="Email3">
 						<DatatypeParameters/>
 					</Names>
 				</Attribute>
 				
-				<Attribute identifier="site_web" translatable="true" informationCollector="false" searchable="false" required="true" datatype="ezurl">
+				<Attribute identifier="site_web" translatable="true" informationCollector="false" searchable="false" required="false" datatype="ezurl">
 					<Names fre-FR="sites internet">
 						<DatatypeParameters/>
 					</Names>
 				</Attribute>
-				<Attribute identifier="facebook" translatable="true" informationCollector="false" searchable="false" required="true" datatype="ezurl">
+				<Attribute identifier="facebook" translatable="true" informationCollector="false" searchable="false" required="false" datatype="ezurl">
 					<Names fre-FR="Facebook">
 						<DatatypeParameters/>
 					</Names>
 				</Attribute>
-				<Attribute identifier="twitter" translatable="true" informationCollector="false" searchable="false" required="true" datatype="ezurl">
+				<Attribute identifier="twitter" translatable="true" informationCollector="false" searchable="false" required="false" datatype="ezurl">
 					<Names fre-FR="twitter">
 						<DatatypeParameters/>
 					</Names>
 				</Attribute>
-				<Attribute identifier="linkedin" translatable="true" informationCollector="false" searchable="false" required="true" datatype="ezurl">
+				<Attribute identifier="linkedin" translatable="true" informationCollector="false" searchable="false" required="false" datatype="ezurl">
 					<Names fre-FR="Linkedin">
 						<DatatypeParameters/>
 					</Names>
 				</Attribute>
-				<Attribute identifier="skype" translatable="true" informationCollector="false" searchable="false" required="true" datatype="ezstring">
+				<Attribute identifier="skype" translatable="true" informationCollector="false" searchable="false" required="false" datatype="ezstring">
 					<Names fre-FR="Skype">
 						<DatatypeParameters/>
 					</Names>
 				</Attribute>
 				
-				<Attribute identifier="secteurs_activites" translatable="true" informationCollector="false" searchable="true" required="false" datatype="eztags">
+				<Attribute identifier="secteurs_activites" translatable="true" informationCollector="false" searchable="true" required="true" datatype="eztags">
 					<Names fre-FR="Secteurs d'activités">
 						<DatatypeParameters>
 							<subtree-limit>2</subtree-limit>
@@ -621,28 +621,28 @@
 						<selection-type>0</selection-type>
 					</DatatypeParameters>
 				</Attribute>
-				<Attribute identifier="presentation" translatable="true" informationCollector="false" searchable="false" required="true" datatype="eztext">
+				<Attribute identifier="presentation" translatable="true" informationCollector="false" searchable="false" required="false" datatype="eztext">
 					<Names fre-FR="Présentation">
 						<DatatypeParameters/>
 					</Names>
 				</Attribute>
-				<Attribute identifier="objectifs" translatable="true" informationCollector="false" searchable="false" required="true" datatype="eztext">
+				<Attribute identifier="objectifs" translatable="true" informationCollector="false" searchable="false" required="false" datatype="eztext">
 					<Names fre-FR="Objectifs">
 						<DatatypeParameters/>
 					</Names>
 				</Attribute>
-				<Attribute identifier="mission" translatable="true" informationCollector="false" searchable="false" required="true" datatype="eztext">
+				<Attribute identifier="mission" translatable="true" informationCollector="false" searchable="false" required="false" datatype="eztext">
 					<Names fre-FR="Mission">
 						<DatatypeParameters/>
 					</Names>
 				</Attribute>
-				<Attribute identifier="vision" translatable="true" informationCollector="false" searchable="false" required="true" datatype="eztext">
+				<Attribute identifier="vision" translatable="true" informationCollector="false" searchable="false" required="false" datatype="eztext">
 					<Names fre-FR="Vision">
 						<DatatypeParameters/>
 					</Names>
 				</Attribute>
 				
-				<Attribute identifier="zones_actions" translatable="true" informationCollector="false" searchable="false" required="true" datatype="eztext">
+				<Attribute identifier="zones_actions" translatable="true" informationCollector="false" searchable="false" required="false" datatype="eztext">
 					<Names fre-FR="Groupe cible">
 						<DatatypeParameters/>
 					</Names>
@@ -678,8 +678,8 @@
 						</columns>
 					</DatatypeParameters>
 				</Attribute>
-				<Attribute identifier="autres_financiers" datatype="ezmatrix" required="false" searchable="true" informationCollector="false" translatable="true">
-					<Names fre-FR="Autres financiers"/>
+				<Attribute identifier="autres_partenaires" datatype="ezmatrix" required="false" searchable="true" informationCollector="false" translatable="true">
+					<Names fre-FR="Autres partenaires"/>
 					<DatatypeParameters>
 						<default-name/>
 						<default-row-count>1</default-row-count>
@@ -714,43 +714,43 @@
 					</DatatypeParameters>
 				</Attribute>
 				
-				<Attribute identifier="budget" translatable="true" informationCollector="false" searchable="false" required="true" datatype="ezstring">
+				<Attribute identifier="budget" translatable="true" informationCollector="false" searchable="false" required="false" datatype="ezstring">
 					<Names fre-FR="Budget Moyen Annuel">
 						<DatatypeParameters/>
 					</Names>
 				</Attribute>
-				<Attribute identifier="compte_bancaire1" translatable="true" informationCollector="false" searchable="false" required="true" datatype="ezstring">
+				<Attribute identifier="compte_bancaire1" translatable="true" informationCollector="false" searchable="false" required="false" datatype="ezstring">
 					<Names fre-FR="Compte Bancaire 1">
 						<DatatypeParameters/>
 					</Names>
 				</Attribute>
-				<Attribute identifier="compte_bancaire2" translatable="true" informationCollector="false" searchable="false" required="true" datatype="ezstring">
+				<Attribute identifier="compte_bancaire2" translatable="true" informationCollector="false" searchable="false" required="false" datatype="ezstring">
 					<Names fre-FR="Compte Bancaire 2">
 						<DatatypeParameters/>
 					</Names>
 				</Attribute>
 				
-				<Attribute identifier="principales_activites" translatable="true" informationCollector="false" searchable="false" required="true" datatype="ezxmltext">
+				<Attribute identifier="principales_activites" translatable="true" informationCollector="false" searchable="false" required="false" datatype="ezxmltext">
 					<Names fre-FR="Principales activités">
 						<DatatypeParameters/>
 					</Names>
 				</Attribute>
-				<Attribute identifier="points_forts_organisation" translatable="true" informationCollector="false" searchable="false" required="true" datatype="ezxmltext">
+				<Attribute identifier="points_forts_organisation" translatable="true" informationCollector="false" searchable="false" required="false" datatype="ezxmltext">
 					<Names fre-FR="Points forts de l'organisation">
 						<DatatypeParameters/>
 					</Names>
 				</Attribute>
-				<Attribute identifier="points_faibles_organisation" translatable="true" informationCollector="false" searchable="false" required="true" datatype="ezxmltext">
+				<Attribute identifier="points_faibles_organisation" translatable="true" informationCollector="false" searchable="false" required="false" datatype="ezxmltext">
 					<Names fre-FR="Points faibles de l'organisation">
 						<DatatypeParameters/>
 					</Names>
 				</Attribute>
-				<Attribute identifier="besoins" translatable="true" informationCollector="false" searchable="false" required="true" datatype="ezxmltext">
+				<Attribute identifier="besoins" translatable="true" informationCollector="false" searchable="false" required="false" datatype="ezxmltext">
 					<Names fre-FR="Besoins">
 						<DatatypeParameters/>
 					</Names>
 				</Attribute>
-				<Attribute identifier="representants" translatable="true" informationCollector="false" searchable="false" required="true" datatype="ezstring">
+				<Attribute identifier="representants" translatable="true" informationCollector="false" searchable="false" required="false" datatype="ezstring">
 					<Names fre-FR="Représentant(e)s">
 						<DatatypeParameters>
 							<max-length>0</max-length>
@@ -763,6 +763,22 @@
                     <Names fre-FR="Référencement" />
                     <DatatypeParameters></DatatypeParameters>
                 </Attribute>
+			</Attributes>
+		</ContentClass>
+		<ContentClass classExistAction="new" urlAliasPattern="&lt;seo|nom&gt;" objectNamePattern="&lt;nom&gt;" identifier="partenaire" isContainer="false">
+			<Names fre-FR="Partenaire"/>
+			<Groups>
+				<Group name="Content"/>
+			</Groups>
+			<Attributes>
+				<Attribute identifier="nom" translatable="true" informationCollector="false" searchable="true" required="true" datatype="ezstring">
+					<Names fre-FR="Nom">
+						<DatatypeParameters>
+							<max-length>0</max-length>
+							<default-string/>
+						</DatatypeParameters>
+					</Names>
+				</Attribute>
 			</Attributes>
 		</ContentClass>
 	</CreateClass>

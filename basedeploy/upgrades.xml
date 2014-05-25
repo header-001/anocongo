@@ -8,7 +8,13 @@
         <xmlinstaller mode="file">extension/anocongo/xmlinstaller/permissions.xml</xmlinstaller>
         <xmlinstaller mode="file">extension/anocongo/xmlinstaller/contenus_test.xml</xmlinstaller>
     </upgrade>
-    <upgrade version="1.2737.0">
+    <upgrade version="1">
+        <php script="runcronjobs.php">
+            <arg>cron_import_ong</arg>
+        </php>
+        <php script="runcronjobs.php">
+            <arg>sitemaps</arg>
+        </php>
         <php script="extension/ezfind/bin/php/updatesearchindexsolr.php">
             <option name="clean-all" />
             <option name="siteaccess">fr_admin</option>

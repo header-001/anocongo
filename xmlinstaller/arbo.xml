@@ -99,5 +99,13 @@
                 <show_children>1</show_children>
             </Attributes>
         </ContentObject>
+        <ContentObject contentClass="folder" remoteID="PARTENAIRES"
+            sort_order="asc" sort_field="priority">
+            <Attributes>
+                <title>Partenaires</title>
+                <in_menu>0</in_menu>
+                <show_children>1</show_children>
+            </Attributes>
+        </ContentObject>
 	</CreateContent>
 </eZXMLImporter>
