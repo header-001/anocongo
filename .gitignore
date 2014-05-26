@@ -3,3 +3,4 @@ fichiers_in
 /*.project
 *.buildpath
 /.settings
+.settings
