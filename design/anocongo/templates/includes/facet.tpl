@@ -1,4 +1,4 @@
-<aside class="">
+<aside class="col-xs-6 col-sm-3 sidebar-offcanvas" id="sidebar" role="navigation">
 	<ul id="active-facets-list">
 		{foreach $defaultSearchFacets as $key => $defaultFacet}
 	      {if array_keys( $activeFacetParameters )|contains( concat( $defaultFacet['field'], ':', $defaultFacet['name']  ) )}
@@ -17,13 +17,16 @@
 	      {/if}
 	  	{/foreach}
 	</ul>
-	<ul id="facet-list">
+	<div id="facet-list" class="accordion">
           {foreach $defaultSearchFacets as $key => $defaultFacet}
               {if array_keys( $activeFacetParameters )|contains( concat( $defaultFacet['field'], ':', $defaultFacet['name']  ) )|not}
-              <li>
+			<div class="accordion-group">
                 {def $facetData=$search_extras.facet_fields.$key}
-                  <span {*style="background-color: #F2F1ED"*}><strong>{$defaultFacet['name']}</strong></span>
-                  <ul>
+                  <div class="accordion-heading">
+                  	 <a href="#collapse{$key}" data-parent="#facet-list" data-toggle="collapse" class="accordion-toggle">{$defaultFacet['name']}</a>
+                  </div>
+                  <div class="accordion-body collapse" id="collapse{$key}">
+                  	<ul>
                     {foreach $facetData.nameList as $key2 => $facetName}
                         {if ne( $key2, '' )}
                         <li>
@@ -36,10 +39,11 @@
                         </li>
                         {/if}
                     {/foreach}
-                  </ul>
+                    </ul>
+                  </div>
                   {undef $facetData}
-              </li>
+              </div>
               {/if}
           {/foreach}
-	</ul>
+	</div>
 </aside>

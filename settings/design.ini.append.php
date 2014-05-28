@@ -5,6 +5,7 @@ DesignExtensions[]=anocongo
 
 [StylesheetSettings]
 FrontendCSSFileList[]=carousel.css
+FrontendCSSFileList[]=offcanvas.css
 FrontendCSSFileList[]=home.less
 FrontendCSSFileList[]=repons.less
 
@@ -13,6 +14,7 @@ FrontendCSSFileList[]=repons.less
 JavaScriptFooterList[]
 
 FrontendJavaScriptList[]=jquery-ui-1.10.4.custom.min.js
+FrontendJavaScriptList[]=bootstrap.js
 FrontendJavaScriptList[]=ano.script.js
 
 

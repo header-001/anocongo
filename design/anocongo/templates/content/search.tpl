@@ -1,3 +1,4 @@
+{basek_persistent_var_set( 'sidebar_right',hash('hide',true()))}
 {def $limit = 10
 	$baseURI	= '/content/search'
 	$search_text ="*"
@@ -57,39 +58,43 @@
 {set $search_count=$search['SearchCount']}
 {def $search_extras=$search['SearchExtras']}
 
-{include name=facet
-         uri='design:includes/facet.tpl'
-         page_uri_suffix=$page_uri_suffix
-         baseURI=$baseURI
-         search_extras=$search_extras
-         defaultSearchFacets=$defaultSearchFacets
-         filterParameters=$filterParameters
-         activeFacetParameters=$activeFacetParameters
-         activeFacetsCount=0}
-
 {*$search_count*}
 {*$hash|attribute(show,3)*}    
 {*$search_result|attribute(show,1)*} 
 
-<div id="search_results">
-    {include name=Navigator
-             uri='design:navigator/google.tpl'
-             page_uri='/content/search'
-             page_uri_suffix=$page_uri_suffix
-             item_count=$search_count
-             view_parameters=$view_parameters
-             item_limit=$limit}
-
-    {foreach $search_result as $result
-             sequence array(bglight,bgdark) as $bgColor}
-       {node_view_gui view=ezfind_line sequence=$bgColor use_url_translation=$use_url_translation content_node=$result}
-    {/foreach}
-
-    {include name=Navigator
-             uri='design:navigator/google.tpl'
-             page_uri='/content/search'
-             page_uri_suffix=$page_uri_suffix
-             item_count=$search_count
-             view_parameters=$view_parameters
-             item_limit=$limit}
-  </div> 
+<div class="row row-offcanvas row-offcanvas-left">
+	{include name=facet
+	         uri='design:includes/facet.tpl'
+	         page_uri_suffix=$page_uri_suffix
+	         baseURI=$baseURI
+	         search_extras=$search_extras
+	         defaultSearchFacets=$defaultSearchFacets
+	         filterParameters=$filterParameters
+	         activeFacetParameters=$activeFacetParameters
+	         activeFacetsCount=0}
+	<div id="search-results" class="col-xs-12 col-sm-9">
+	  	<p class="pull-right visible-xs">
+	    	<button type="button" class="btn btn-primary btn-xs" data-toggle="offcanvas">Toggle nav</button>
+	  	</p>
+	    {include name=Navigator
+	             uri='design:navigator/google.tpl'
+	             page_uri='/content/search'
+	             page_uri_suffix=$page_uri_suffix
+	             item_count=$search_count
+	             view_parameters=$view_parameters
+	             item_limit=$limit}
+	
+	    {foreach $search_result as $result
+	             sequence array(bglight,bgdark) as $bgColor}
+	       {node_view_gui view=ezfind_line sequence=$bgColor use_url_translation=$use_url_translation content_node=$result}
+	    {/foreach}
+	
+	    {include name=Navigator
+	             uri='design:navigator/google.tpl'
+	             page_uri='/content/search'
+	             page_uri_suffix=$page_uri_suffix
+	             item_count=$search_count
+	             view_parameters=$view_parameters
+	             item_limit=$limit}
+	  </div> 
+</div>
