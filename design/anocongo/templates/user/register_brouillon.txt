@@ -1,0 +1,87 @@
+<form enctype="multipart/form-data" action="/outils/fr/user/register" method="post" name="Register">
+<input type="hidden" name="ezxform_token" value="fd65b7435f00ac0d63773acbcabe71ec6a093028">
+
+
+<div class="maincontentheader">
+<h1>Inscription</h1>
+</div>
+    <input type="hidden" name="ContentObjectAttribute_id[]" value="2660">
+    <div class="form-group">
+       <label class="col-sm-2 control-label">First name</label>
+	   <div class="col-sm-10">
+			<input type="text" class="form-control" id="ContentObjectAttribute_ezstring_data_text_2660" name="ContentObjectAttribute_ezstring_data_text_2660" value="" required="required">
+		</div>
+	</div>
+	
+    <input type="hidden" name="ContentObjectAttribute_id[]" value="2661">
+    <div class="form-group">
+       <label class="col-sm-2 control-label">Last name</label>
+	   <div class="col-sm-10">
+			<input type="text" class="form-control" id="ContentObjectAttribute_ezstring_data_text_2661" name="ContentObjectAttribute_ezstring_data_text_2661" value="" required="required">
+		</div>
+	</div>
+    
+	<input type="hidden" name="ContentObjectAttribute_id[]" value="2662">
+    <div class="form-group">
+       
+	    <label class="col-sm-2 control-label">Identifiant:</label>
+		 <div class="col-sm-10">
+			<input class="form-control" id="ezcoa-12_user_account_login" type="text" name="ContentObjectAttribute_data_user_login_2662" size="16" value="" required="required">
+		</div>
+	</div>	
+	<div class="form-group">	
+        <label class="col-sm-2 control-label">Courriel:</label>
+		<div class="col-sm-10">
+			<input class="form-control" id="ezcoa-12_user_account_email" type="email" name="ContentObjectAttribute_data_user_email_2662" size="28" value="" required="required">
+		</div>
+	</div>	
+	<div class="form-group">
+	    <label class="col-sm-2 control-label">Mot de passe:</label>
+		<div class="col-sm-10">
+			<input class="form-control" id="ezcoa-12_user_account_password" type="password" name="ContentObjectAttribute_data_user_password_2662" size="16" value="" required="required">
+		</div>
+	</div>
+	<div class="form-group">
+	    <label class="col-sm-2 control-label">Confirmer le mot de passe:</label>
+		<div class="col-sm-10">
+	    <input class="form-control" id="ezcoa-12_user_account_password_confirm" type="password" name="ContentObjectAttribute_data_user_password_confirm_2662" size="16" value="" required="required">
+		</div>
+
+	</div>
+	
+	
+    <input type="hidden" name="ContentObjectAttribute_id[]" value="2663">
+    <div class="form-group">
+       <label class="col-sm-2 control-label">Signature</label>
+	   <div class="col-sm-10">       
+    <textarea class="form-control" id="ContentObjectAttribute_data_text_2663" name="ContentObjectAttribute_data_text_2663" rows="10"></textarea>
+		</div>
+	</div>
+	
+    <input type="hidden" name="ContentObjectAttribute_id[]" value="2664">
+    <div class="form-group">
+       <label class="col-sm-2 control-label">Image</label>
+	   <div class="col-sm-10">
+			<input type="hidden" name="MAX_FILE_SIZE" value="1048576">
+			<input class="form-control" id="ezcoa-180_image_file" name="ContentObjectAttribute_data_imagename_2664" type="file">
+		</div>
+	</div>	
+	
+	<div class="form-group">
+	    <label class="col-sm-2 control-label">Texte alternatif de l'image:</label>
+		 <div class="col-sm-10">
+			<input class="form-control" id="ezcoa-180_image_alttext" name="ContentObjectAttribute_data_imagealttext_2664" type="text" value="">
+		</div>
+	</div>
+
+    
+    <div class="block">
+        <p>Le support des cookies doit être activé dans votre navigateur pour créer votre compte.</p>
+    </div>
+
+  <div class="form-group">
+    <div class="col-sm-offset-2 col-sm-10">
+            <input class=" btn btn-primary" type="submit" id="PublishButton" name="PublishButton" value="S'inscrire" onclick="window.setTimeout( disableButtons, 1 ); return true;">
+            <input class=" btn btn-primary" type="submit" id="CancelButton" name="CancelButton" value="Abandonner" onclick="window.setTimeout( disableButtons, 1 ); return true;">
+    </div>
+	</div></form>

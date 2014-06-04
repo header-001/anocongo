@@ -31,9 +31,9 @@
                         {if ne( $key2, '' )}
                         <li>
                             <a href={concat(
-                                $baseURI, '&filter[]=', $facetData.fieldList[$key2], ':"', $key2|solr_quotes_escape|rawurlencode, '"',
+                                $baseURI, '&filter[]=', $facetData.fieldList[$key2], ':"', $key2|solr_quotes_escape, '"',
                                 '&activeFacets[', $defaultFacet['field'], ':', $defaultFacet['name'], ']=',
-                                $facetName|rawurlencode,
+                                $facetName,
                                 $uriSuffix )|ezurl}>
                             {$facetName|wash}</a> ({$facetData.countList[$key2]})
                         </li>

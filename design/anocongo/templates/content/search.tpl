@@ -1,7 +1,6 @@
 {basek_persistent_var_set( 'sidebar_right',hash('hide',true()))}
 {def $limit = 10
 	$baseURI	= '/content/search'
-	$search_text ="*"
 	$searchType=""
 	$searchWho=""
 	$class_id = array()
@@ -12,7 +11,7 @@
 	$activeFacetParameters = array()
 	$uriSuffix = ''
 }
-
+{set  $search_text ="*"}
 {set  $defaultSearchFacets = $defaultSearchFacets|append(hash( 'field','attr_province_lk','name',"Province"),
 														hash( 'field','attr_district_lk','name',"District"),
 														hash( 'field','attr_commune_lk','name',"Commune"),
@@ -71,9 +70,10 @@
 	         defaultSearchFacets=$defaultSearchFacets
 	         filterParameters=$filterParameters
 	         activeFacetParameters=$activeFacetParameters
-	         activeFacetsCount=0}
+	         activeFacetsCount=0
+	         uriSuffix=$uriSuffix}
 	<div id="search-results" class="col-xs-12 col-sm-9">
-	  	<p class="pull-right visible-xs">
+	  	<p class="pull-left visible-xs">
 	    	<button type="button" class="btn btn-primary btn-xs" data-toggle="offcanvas">Toggle nav</button>
 	  	</p>
 	    {include name=Navigator
@@ -83,12 +83,15 @@
 	             item_count=$search_count
 	             view_parameters=$view_parameters
 	             item_limit=$limit}
-	
-	    {foreach $search_result as $result
-	             sequence array(bglight,bgdark) as $bgColor}
-	       {node_view_gui view=ezfind_line sequence=$bgColor use_url_translation=$use_url_translation content_node=$result}
+		<ol>
+	    {foreach $search_result as $k => $result}
+	       	{*node_view_gui view=ezfind_line sequence=$bgColor use_url_translation=$use_url_translation content_node=$result*}
+	    	{node_view_gui view=line 
+							content_node=$result
+							range=sum(sum($k,1),$view_parameters.offset)
+							}
 	    {/foreach}
-	
+		</ol>
 	    {include name=Navigator
 	             uri='design:navigator/google.tpl'
 	             page_uri='/content/search'

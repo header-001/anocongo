@@ -7,6 +7,7 @@ DesignExtensions[]=anocongo
 FrontendCSSFileList[]=carousel.css
 FrontendCSSFileList[]=offcanvas.css
 FrontendCSSFileList[]=home.less
+FrontendCSSFileList[]=ong.css
 FrontendCSSFileList[]=repons.less
 
 # List of javascripts to use in footer

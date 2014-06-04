@@ -27,27 +27,27 @@ footer {
     transition: all 0.25s ease-out;
   }
 
-  .row-offcanvas-right
-  .sidebar-offcanvas {
+.row-offcanvas-right
+.sidebar-offcanvas {
     right: -50%; /* 6 columns */
-  }
+}
 
-  .row-offcanvas-left
-  .sidebar-offcanvas {
-    left: -31%; /* 6 columns */
-  }
+.row-offcanvas-left
+.sidebar-offcanvas {
+ left: -45%; /* 6 columns */
+}
 
-  .row-offcanvas-right.active {
-    right: 0%; /* 6 columns */
-  }
+.row-offcanvas-right.active {
+  right: -50%; /* 6 columns */
+}
 
-  .row-offcanvas-left.active {
-    left: 35%; /* 6 columns */
-  }
+.row-offcanvas-left.active {
+  left: 50%; /* 6 columns */
+}
 
-  .sidebar-offcanvas {
-    position: absolute;
-    top: 0;
-    width: 35%; /* 6 columns */
-  }
+.sidebar-offcanvas {
+  position: absolute;
+  top: 0;
+  width: 35%; /* 6 columns */
+}
 }
